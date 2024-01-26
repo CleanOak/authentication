@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import re
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -20,17 +21,24 @@ print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
 
 
 def signup():
-    user_name = input("Enter your user name: \n")
-    email = input("Enter email address: \n")
-    passwd = input("Enter password: \n")
-    conf_passwd = input("Confirm password: \n")
+    while True:
 
-    if conf_passwd == passwd:
+            user_name = input("Enter your username: \n")
+            email = input("Enter email address: \n")
+            pattern = "^[a-zA-Z0-9-_]+@[a-zA-Z0-9]+\.[a-z]{1,3}$"
+            if re.match(pattern, email):
+                 print("This is correct")
+        
+                 
+            passwd = input("Enter password: \n")
+            conf_passwd = input("Confirm password: \n")
 
-        print("You have registered successfully!")
+            if conf_passwd == passwd:
 
-    else:
-        print("Password is not the same as above!")
+                print("You have registered successfully!")
+
+            else:
+                print("Password is not the same as above!")
 
 signup()
         
