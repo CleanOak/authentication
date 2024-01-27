@@ -24,20 +24,22 @@ print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
     
 
 def login(data):
-    user_name = input("Enter your username: \n")
-    passwd = input("Enter password: \n")
+    while True:
+        user_name = input("Enter your username: \n")
+        passwd = input("Enter password: \n")
 
-    for x in data:
-        if (user_name == x[0] and passwd == x[2]):
-            print("Login succesful")              
-                
-        else:
-         print("Username or password incorrect")
+        for x in data:
+            if (user_name == x[0] and passwd == x[2]):
+                print("Login succesful")              
+                    
+            else:
+             print("Username or password incorrect")
         
     
 
 
 login(data)
+#print(data)
 
 
 
