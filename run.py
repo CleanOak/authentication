@@ -29,8 +29,7 @@ def login(data):
 
     for x in data:
         if (user_name == x[0] and passwd == x[2]):
-            print("Login succesful")
-                   
+            print("Login succesful")              
                 
         else:
          print("Username or password incorrect")
