@@ -1,9 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
-import re
-# from distutils.util import strtobool as stb 
-import setuptools
-import sys
+
+
 
 
 SCOPE = [
@@ -21,13 +19,10 @@ user_info = SHEET.worksheet('user_info')
 
 data = user_info.get_all_values()
 
-print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
-
 def userPrompt():
      """
      Get user response
-     """
-     
+     """  
      try:
           
             userAnswer  = input("Are you a new or existing user? y/n\n")
@@ -38,10 +33,6 @@ def userPrompt():
           
      except ValueError:("Please enter y or n")
           
-          
-   
-
-
 def login(login_data):
             
             """
@@ -60,25 +51,36 @@ def login(login_data):
                     if (user1 == user_name and passwd1 == passwd):
                         print ("You have logged in sucessfully")
 
-                        break
-                                
+                        break                                
                 except:
                     print("Your username or password does not match please try again\n")
 
 
-def update_spreadsheet(data, worksheet):
+# def update_spreadsheet(data, worksheet):
      
-     print(f'Updating {worksheet} worksheet.\n')
-     update_to_spreadsheet =  SHEET.worksheet(worksheet)
-     update_to_spreadsheet.append_row(data)
-     print(f'{worksheet} worksheet has updated successfully')
+#      print(f'Updating {worksheet} worksheet.\n')
+#      update_to_spreadsheet =  SHEET.worksheet(worksheet)
+#      update_to_spreadsheet.append_row(data)
+#      print(f'{worksheet} worksheet has updated successfully')
+
+
+# def add_new_user():
+#      print("Adding your account to the system")
+#      new_user = SHEET.worksheet("user_info").get_all_values()
+#      new_user_row = new_user[-1]
+
+#      user_data = []
+#      for user in new_user:
+#           user_data.append()
+          
+
                 
 
 # def signup():
+
 #     while True:
 
-#             user_name = input("Enter your username: \n")
-#             email = input("Enter email address: \n")             
+#             user_name = input("Enter your username: \n")           
 #             passwd = input("Enter password: \n")
 #             conf_passwd = input("Confirm password: \n")
 
@@ -87,13 +89,19 @@ def update_spreadsheet(data, worksheet):
 #             else:
 #                 print("Password is not the same as above!")
 
-answer = userPrompt()
+def main():
+     
+    answer = userPrompt()
 
-if answer == 1:
-     login(data)
+    if answer == 1:
+        login(data)
 
-elif answer == 0:
-    print("please sign up")
+    elif answer == 0:
+        print("please sign up")
+
+
+print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
+main()
 
 
 
