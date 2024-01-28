@@ -56,12 +56,15 @@ def login(login_data):
                     print("Your username or password does not match please try again\n")
 
 
-# def update_spreadsheet(data, worksheet):
-     
-#      print(f'Updating {worksheet} worksheet.\n')
-#      update_to_spreadsheet =  SHEET.worksheet(worksheet)
-#      update_to_spreadsheet.append_row(data)
-#      print(f'{worksheet} worksheet has updated successfully')
+def update_spreadsheet(data):
+    try:
+        print('Updating user info worksheet.\n')
+        update_to_spreadsheet = SHEET.worksheet('user_info')
+        update_to_spreadsheet.append_row(data)
+        print('worksheet has updated successfully')
+
+    except ValueError as e:
+          print(e)
 
 
 # def add_new_user():
@@ -79,7 +82,6 @@ def login(login_data):
 def signup():
             
             while True:
-                 
 
                 new_username = input("Enter your username: \n")
                 email_address = input("Enter your email address: \n")           
@@ -88,11 +90,18 @@ def signup():
                   
                 if conf_passwd == new_passwd:
                     print("Password matched!")
+                   
                     print(f'Your username {new_username} and password has been stored successfully!!!')
 
                     break
                 else:
                         print("Please make sure both passwords matches!")
+
+            data = [new_username,email_address,conf_passwd]
+
+            # print(data)
+
+            update_spreadsheet(data)
                            
 
 def main():
@@ -103,13 +112,12 @@ def main():
         login(data)
 
     elif answer == 0:
-        print("please sign up")
+        signup()
 
 
 print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
-#main()
-# signup()
-print(data)
+
+main()
 
 
 
