@@ -76,18 +76,24 @@ def login(login_data):
 
                 
 
-# def signup():
+def signup():
+            
+            while True:
+                 
 
-#     while True:
+                new_username = input("Enter your username: \n")
+                email_address = input("Enter your email address: \n")           
+                new_passwd = input("Enter password: \n")
+                conf_passwd = input("Confirm password: \n")
+                  
+                if conf_passwd == new_passwd:
+                    print("Password matched!")
+                    print(f'Your username {new_username} and password has been stored successfully!!!')
 
-#             user_name = input("Enter your username: \n")           
-#             passwd = input("Enter password: \n")
-#             conf_passwd = input("Confirm password: \n")
-
-#             if conf_passwd == passwd:
-#                 print("You have registered successfully!")
-#             else:
-#                 print("Password is not the same as above!")
+                    break
+                else:
+                        print("Please make sure both passwords matches!")
+                           
 
 def main():
      
@@ -101,7 +107,9 @@ def main():
 
 
 print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
-main()
+#main()
+# signup()
+print(data)
 
 
 
