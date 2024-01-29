@@ -34,3 +34,61 @@
 9. [Deployment](#deployment)
 10. [Credits](#credits)
 11. [Acknowledgements](#acknowledgements)
+
+## Project Goals
+### User Stories
+
+- Be able to sign up as new user
+- Be able to login as existing user
+
+### Site Owner Goals
+- Create a user account
+- Enter username, email and password
+- Login with username password
+- Cannot save same passwords and email
+
+## User Experience
+### 
+
+
+
+
+
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://github.com/Sinha5714/hangman-pp3)
+
+### Cloning the repository in GitHub
+1. Visit the GitHub page of the website's repository
+2. Click the “Clone” button on top of the page
+3. Click on “HTTPS”
+4. Click on the copy button next to the link to copy it
+5. Open your IDE
+6. Type ```git clone <copied URL>``` into the terminal
+
+
+## Credits
+
+### Content
+- 
+
+### Code
+#### The following ideas were borrowed from [Love Sandwiches](https://github.com/Sinha5714/Love_Sandwiches)
+
+-  validate_user_details function
+-  How to import gspread
+-  How to import Credentials from google.oauth
+
+#### The following code idea was taken from google search and various youtube videos
+
+- 
+- 
+
+
+### Thank You
+- to my mentor Mo Shami for supporting me with his feedback through the entire project
+- special thanks to my husband Remo Liebetrau to help me finding out the issues in the game
+- to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
