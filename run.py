@@ -22,15 +22,18 @@ def userPrompt():
      Get user response whether user is an existing on or
      a new user
      """  
-     try:
+     while True:
           
-            userAnswer  = input("Do you already have an account? y/n\n")
-            if userAnswer.lower() == 'y':
-                return 1
-            elif userAnswer.lower() == 'n':
-                return 0
-          
-     except ValueError:("Please enter y or n")
+        try:
+            
+                userAnswer  = input("Do you already have an account? y/n\n")
+                if userAnswer.lower() == 'y':
+                    return 1
+                elif userAnswer.lower() == 'n':
+                    return 0
+            
+        except ValueError as e:
+                print ("Please enter y or n", e)
           
 def login(login_data):
             
@@ -39,6 +42,7 @@ def login(login_data):
             """   
             while True: 
 
+                print("Please enter your details below...\n")           
                 user_name = input("Enter your username: \n")
                 passwd = input("Enter password: \n")
                 try:
@@ -73,7 +77,8 @@ def signup():
             """
             
             while True:
-
+                
+                print("Follow the prompts to save your user information...\n")
                 new_username = input("Enter your username: \n")
                 email_address = input("Enter your email address: \n")           
                 new_passwd = input("Enter password: \n")
