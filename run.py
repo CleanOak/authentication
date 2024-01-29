@@ -2,8 +2,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
-
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -21,11 +19,12 @@ data = user_info.get_all_values()
 
 def userPrompt():
      """
-     Get user response
+     Get user response whether user is an existing on or
+     a new user
      """  
      try:
           
-            userAnswer  = input("Are you a new or existing user? y/n\n")
+            userAnswer  = input("Do you already have an account? y/n\n")
             if userAnswer.lower() == 'y':
                 return 1
             elif userAnswer.lower() == 'n':
@@ -36,7 +35,7 @@ def userPrompt():
 def login(login_data):
             
             """
-            Get user credentials to login
+            Get existing user credentials to login
             """   
             while True: 
 
@@ -67,19 +66,11 @@ def update_spreadsheet(data):
           print(e)
 
 
-# def add_new_user():
-#      print("Adding your account to the system")
-#      new_user = SHEET.worksheet("user_info").get_all_values()
-#      new_user_row = new_user[-1]
-
-#      user_data = []
-#      for user in new_user:
-#           user_data.append()
-          
-
-                
-
 def signup():
+            
+            """
+            Get new user details to create login credentials 
+            """
             
             while True:
 
@@ -99,12 +90,14 @@ def signup():
 
             data = [new_username,email_address,conf_passwd]
 
-            # print(data)
-
             update_spreadsheet(data)
                            
 
 def main():
+
+    """
+    Main function to initalise the whole application
+    """
      
     answer = userPrompt()
 
