@@ -1,6 +1,8 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import re
+from random import randint
+
 
 
 SCOPE = [
@@ -18,6 +20,19 @@ user_info = SHEET.worksheet('user_info')
 
 data = user_info.get_all_values()
 
+
+
+# countries = ['Englnd', 'Ghana', 'America', 'Nigeria',
+#              'Italy', 'China', 'Mali', 'Russia',
+#              'Argentina', 'Jamaica', 'Canada',
+#              'Brazil', 'Egypt', 'Norway']
+
+Hidden_Pattern=[[' ']*8 for x in range(8)]
+Guess_Pattern=[[' ']*8 for x in range(8)]
+
+let_to_num={'A':0,'B':1, 'C':2,'D':3,'E':4,'F':5,'G':6,'H':7}
+
+
 def userPrompt():
      """
      Get user response whether user is an existing on or
@@ -34,7 +49,7 @@ def userPrompt():
                     return 0
 
         except:
-             print ("Please enter y or n")
+         print ("Please enter y or n")
           
 def login(login_data):
             
@@ -79,23 +94,22 @@ def signup():
             
             while True:
 
-                try:
                 
-                    print("Follow the prompts to save your user information...\n")
-                    new_username = input("Enter your username: \n")
+                print("Follow the prompts to save your user information...\n")
+                new_username = input("Enter your username: \n")
 
-                    print("Please enter an email with the format name@some_address.com")
-                    email_address = input("Enter your email address: \n")   
+                print("Please enter an email with the format name@some_address.com")
+                email_address = input("Enter your email address: \n")   
 
-                    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
-                    
-                    if (re.fullmatch(regex, email_address)):
-                        print("Email format accepted")
+                regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+                
+                if (re.fullmatch(regex, email_address)):
+                    print("Email format accepted")
 
-                        break
-
-                except ValueError:
-                        print("Please enter a valid email format")
+                    break
+                else:
+                    print("Please enter a valid email format with the format name@some_address.com")
+        
                        
             new_passwd = input("Enter password: \n")
             conf_passwd = input("Confirm password: \n")
@@ -112,6 +126,74 @@ def signup():
             data = [new_username,email_address,conf_passwd]
 
             update_spreadsheet(data)
+
+
+#Function is defined to print the board of battleship
+def print_board(board):
+
+    print(' A B C D E F G H')
+    print(' ***************')
+    row_num=1
+    for row in board:
+        print("%d|%s|" % (row_num, "|".join(row)))
+        row_num +=1
+
+
+def get_ship_location():
+    #Enter the row number between 1 to 8
+    row=input('Please enter a ship row 1-8 ').upper()
+    while row not in '12345678':
+        print("Please enter a valid row ")
+        row=input('Please enter a ship row 1-8 ')
+    #Enter the Ship column from A TO H
+    column=input('Please enter a ship column A-H ').upper()
+    while column not in 'ABCDEFGH':
+        print("Please enter a valid column ")
+        column=input('Please enter a ship column A-H ')
+    return int(row)-1,let_to_num[column]
+
+#Function that creates the ships
+def create_ships(board):
+    for ship in range(5):
+        ship_r, ship_cl=randint(0,7), randint(0,7)
+        while board[ship_r][ship_cl] =='X':
+            ship_r, ship_cl = randint(0, 7), randint(0, 7)
+        board[ship_r][ship_cl] = 'X'
+
+
+
+def count_hit_ships(board):
+    count=0
+    for row in board:
+        for column in row:
+            if column=='X':
+                count+=1
+    return count
+
+create_ships(Hidden_Pattern)
+#print_board(Hidden_Pattern)
+turns = 10
+while turns > 0:
+    print('Welcome to Battleship')
+    print_board(Guess_Pattern)
+    row,column =get_ship_location()
+    if Guess_Pattern[row][column] == '-':
+        print(' You already guessed that ')
+    elif Hidden_Pattern[row][column] =='X':
+        print(' Congratulations you have hit the battleship ')
+        Guess_Pattern[row][column] = 'X'
+        turns -= 1
+    else:
+        print('Sorry,You missed')
+        Guess_Pattern[row][column] = '-'
+        turns -= 1
+    if  count_hit_ships(Guess_Pattern) == 5:
+        print("Congratulations you have sunk all the battleships ")
+        break
+    print(' You have ' +str(turns) + ' turns remaining ')
+    if turns == 0:
+        print('Game Over ')
+        
                         
 
 def main():
@@ -131,7 +213,9 @@ def main():
 
 print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
 
-main()
+#main()
+create_ships()
+
 
 
 
