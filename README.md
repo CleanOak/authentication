@@ -1,4 +1,4 @@
-# User Authentication Application
+# Guessing Game
 
 (Developer: Morgan Asare)
 
