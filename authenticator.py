@@ -22,10 +22,7 @@ data = user_info.get_all_values()
 
 
 
-# countries = ['Englnd', 'Ghana', 'America', 'Nigeria',
-#              'Italy', 'China', 'Mali', 'Russia',
-#              'Argentina', 'Jamaica', 'Canada',
-#              'Brazil', 'Egypt', 'Norway']
+
 
 Hidden_Pattern=[[' ']*8 for x in range(8)]
 Guess_Pattern=[[' ']*8 for x in range(8)]
