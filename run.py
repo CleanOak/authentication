@@ -1,12 +1,14 @@
 
 import random
+import time
+import os
 
 
 
 
 
 
-countries = ['Englnd', 'Ghana', 'America', 'Nigeria',
+countries = ['England', 'Ghana', 'America', 'Nigeria',
              'Italy', 'China', 'Mali', 'Russia',
              'Argentina', 'Jamaica', 'Canada',
             'Brazil', 'Egypt', 'Norway']
@@ -67,7 +69,7 @@ def play_guess_country(random_word):
 
         if wrong_letter_count == 0:
             print(f"\nCongrats. The secret word is {random_word}.")
-            print("\nYou saved the man:)")
+            print("\nYou Guessed correctly:)")
             break
         if tries == 0:
             print("\n")
@@ -76,5 +78,30 @@ def play_guess_country(random_word):
     return tries
 
 
+def restart_game():
+    """
+    Function to ask user if they want to play again
+    and restart the game and if not exit the terminal
+    """
+    while True:
+        answer = input(f"\nDo you want to play again?: Y/N\n")
+        os.system('clear')
+        if answer.upper() == "Y":
+            print(f"\nTRY YOUR LUCK AGAIN!!")
+            print(f"\nRestarting Game......")
+            time.sleep(2.5)
+            play_guess_country(select_random_word())
+        elif answer.upper() == "N":
+            time.sleep(1.5)
+            print(f"\nGood Bye!!")
+            time.sleep(1.5)
+            print(f"\nLogging Out....")
+            time.sleep(3)
+            break
+        else:
+            print(f"Invalid input. Type Y/N")
+
+
 
 play_guess_country(select_random_word())
+restart_game()
