@@ -144,9 +144,9 @@ def main():
         signup()
 
 
-print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
+#print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
 
-main()
+#main()
 
 
 
