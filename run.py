@@ -4,10 +4,6 @@ import time
 import os
 
 
-
-
-
-
 countries = ['England', 'Ghana', 'America', 'Nigeria',
              'Italy', 'China', 'Mali', 'Russia',
              'Argentina', 'Jamaica', 'Canada',
@@ -31,7 +27,6 @@ def play_guess_country(random_word):
     """
     guessed_letters = "AEIOU"
     tries = 10
-    #print(Fore.WHITE + display_hangman(tries))
     print(f"Total Attempts: {tries}\n")
     print(" _ " * len(random_word))
 
@@ -42,21 +37,21 @@ def play_guess_country(random_word):
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{guess} is already guessed!")
-                #print(play_guess_country(tries))
+                
                 print(f"\n Attempt left: {tries}\n")
             elif guess not in random_word:
                 print(f"\n You guessed wrong. Try Again")
                 tries -= 1
                 guessed_letters += guess
-                #print(play_guess_country(tries))
+                
                 print(f"\n Attempt left: {tries}\n")
             else:
                 print(f"\n Correct! {guess} is in the word.")
-                #print(play_guess_country(tries))
+                
                 print(f"\n Attempt left: {tries}\n")
         else:
             print(f"\n Invalid input. Enter only one alphabet")
-            #print(play_guess_country(tries))
+            
             print(f"\n Attempt left: {tries}\n")
         guessed_letters += guess
 
