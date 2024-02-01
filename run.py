@@ -1,7 +1,3 @@
-from authenticator import login
-from authenticator import update_spreadsheet
-from authenticator import signup
-
 
 import random
 
@@ -35,7 +31,7 @@ def play_guess_country(random_word):
     tries = 10
     #print(Fore.WHITE + display_hangman(tries))
     print(f"Total Attempts: {tries}\n")
-    print(" _ " * 6)
+    print(" _ " * len(random_word))
 
     while tries > 0:
         wrong_letter_count = 0
@@ -64,7 +60,7 @@ def play_guess_country(random_word):
 
         for letter in random_word:
             if letter in guessed_letters:
-                print(f"{letter}, end=' '")
+                print(f"{letter}", end=' ')
             else:
                 print(" _ ", end=' ')
                 wrong_letter_count += 1
@@ -80,4 +76,5 @@ def play_guess_country(random_word):
     return tries
 
 
-play_guess_country()
+
+play_guess_country(select_random_word())
