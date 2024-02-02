@@ -5,7 +5,7 @@ import os
 
 # from authenticator import login
 # from authenticator import signup
-from authenticate import login_data
+# from authenticator import login_data
 
 
 countries = ['England', 'Ghana', 'America', 'Nigeria',

@@ -17,9 +17,6 @@ GSPREAD_CLIENT = gspread.authorize(SCPOED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Authenticate')
 
 
-
-
-
 user_info = SHEET.worksheet('user_info')
 data = user_info.get_all_values()
 
@@ -141,7 +138,7 @@ def signup():
 #     elif answer == 0:
 #         signup()
 
-
+signup()
 
 
 
