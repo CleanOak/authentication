@@ -16,37 +16,31 @@ SCPOED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCPOED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Authenticate')
 
+
+
+
 user_info = SHEET.worksheet('user_info')
 
 data = user_info.get_all_values()
 
 
-
-
-
-Hidden_Pattern=[[' ']*8 for x in range(8)]
-Guess_Pattern=[[' ']*8 for x in range(8)]
-
-let_to_num={'A':0,'B':1, 'C':2,'D':3,'E':4,'F':5,'G':6,'H':7}
-
-
-def userPrompt():
-     """
-     Get user response whether user is an existing on or
-     a new user
-     """  
-     while True:
+# def userPrompt():
+#      """
+#      Get user response whether user is an existing on or
+#      a new user
+#      """  
+#      while True:
           
-        try:
+#         try:
             
-                userAnswer  = input("Do you already have an account? y/n\n")
-                if userAnswer.lower() == 'y':
-                    return 1
-                elif userAnswer.lower() == 'n':
-                    return 0
+#                 userAnswer  = input("Do you already have an account? y/n\n")
+#                 if userAnswer.lower() == 'y':
+#                     return 1
+#                 elif userAnswer.lower() == 'n':
+#                     return 0
 
-        except:
-         print ("Please enter y or n")
+#         except:
+#          print ("Please enter y or n")
           
 def login(login_data):
             
@@ -126,24 +120,22 @@ def signup():
 
 
 
-def main():
+# def main():
 
-    """
-    Main function to initalise the whole application
-    """
+#     """
+#     Main function to initalise the whole application
+#     """
      
-    answer = userPrompt()
+#     answer = userPrompt()
 
-    if answer == 1:
-        login(data)
+#     if answer == 1:
+#         login(data)
 
-    elif answer == 0:
-        signup()
+#     elif answer == 0:
+#         signup()
 
 
-#print("LOGIN AUTHENTICATION AND ACCESS CONTROL MODULE\n")
 
-#main()
 
 
 

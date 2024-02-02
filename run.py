@@ -3,6 +3,8 @@ import random
 import time
 import os
 
+from authenticator import userPrompt
+
 
 countries = ['England', 'Ghana', 'America', 'Nigeria',
              'Italy', 'China', 'Mali', 'Russia',
@@ -15,7 +17,25 @@ def game_banner():
     """
     function to display banner for the game
     """
+    print("WELCOME TO THE GUESSING GAME")
+
+
+def login_check():
+    """
+    Ask user if they have login credentials or not
+    """
+      
+    userAnswer  = input("Do you already have an account? y/n\n")
+    if userAnswer.lower() == 'y':
+        return 1
+    elif userAnswer.lower() == 'n':
+        return 0
+    else:
+         print ("Please enter y or n")
     
+
+
+
 
 
 def select_random_word():
@@ -105,6 +125,13 @@ def restart_game():
             print(f"Invalid input. Type Y/N")
 
 
+def main():
+    game_banner()
+    login_check()
 
-play_guess_country(select_random_word())
-restart_game()
+
+    #play_guess_country(select_random_word())
+    #restart_game()
+
+
+main()
