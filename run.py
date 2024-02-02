@@ -10,6 +10,14 @@ countries = ['England', 'Ghana', 'America', 'Nigeria',
             'Brazil', 'Egypt', 'Norway']
 
 
+
+def game_banner():
+    """
+    function to display banner for the game
+    """
+    
+
+
 def select_random_word():
     """
     Select random word from list words and return in upper case
