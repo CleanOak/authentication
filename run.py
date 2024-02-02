@@ -68,7 +68,7 @@ def play_guess_country(random_word):
             break
         if tries == 0:
             print("\n")
-            print(f"LOSER! The secret word was {random_word}.\n")
+            print(f"OOO! You lost this time but better luck next time :)\n The correct word is {random_word}.\n")
 
     return tries
 
