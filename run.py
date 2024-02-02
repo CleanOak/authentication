@@ -18,9 +18,9 @@ def app_banner():
     """
     function to display banner for the game for the application
     """
-    print("++++++++++++++++++++++++++++++++++++")
+    print("+++++++++++++++++++++++++++++++++++++++++++")
     print("*** WELCOME TO THE WORLD GUESSING GAME ***")
-    print("++++++++++++++++++++++++++++++++++++")
+    print("+++++++++++++++++++++++++++++++++++++++++++\n")
 
 def game_banner():
     """
