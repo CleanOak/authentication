@@ -118,7 +118,7 @@ def play_guess_country(random_word):
 
         if wrong_letter_count == 0:
             print(f"\nCongrats. The secret word is {random_word}.")
-            print("\nYou Guessed correctly:)")
+            print("\nHURAAYYY!!! You Guessed correctly :)")
             break
         if tries == 0:
             print("\n")
