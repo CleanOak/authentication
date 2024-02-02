@@ -16,35 +16,39 @@ SCPOED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCPOED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Authenticate')
 
-
 user_info = SHEET.worksheet('user_info')
-data = user_info.get_all_values()
+
+def login_data():
+     
+    data = user_info.get_all_values()
+    return data
 
 
-def userPrompt(user_answer):
-     """
-     Get user response whether user is an existing on or
-     a new user
-     """  
-    #  while True:
+
+# def userPrompt(user_answer):
+#      """
+#      Get user response whether user is an existing on or
+#      a new user
+#      """  
+#     #  while True:
           
-        # try:
+#         # try:
             
-        #         userAnswer  = input("Do you already have an account? y/n\n")
-        #         if userAnswer.lower() == userAnswer:
-        #             return 1
-        #         elif userAnswer.lower() == userAnswer:
-        #             return 0
+#         #         userAnswer  = input("Do you already have an account? y/n\n")
+#         #         if userAnswer.lower() == userAnswer:
+#         #             return 1
+#         #         elif userAnswer.lower() == userAnswer:
+#         #             return 0
 
-        # except:
-        #  print ("Please enter y or n")
+#         # except:
+#         #  print ("Please enter y or n")
 
     
-     if user_answer == 1:
-        login(data)
+#      if user_answer == 1:
+#         login(login_data())
 
-     elif user_answer == 0:
-        signup()
+#      elif user_answer == 0:
+#         signup()
           
 def login(login_data):
             
@@ -124,21 +128,7 @@ def signup():
 
 
 
-# def main():
 
-#     """
-#     Main function to initalise the whole application
-#     """
-     
-#     answer = userPrompt()
-
-#     if answer == 1:
-#         login(data)
-
-#     elif answer == 0:
-#         signup()
-
-signup()
 
 
 

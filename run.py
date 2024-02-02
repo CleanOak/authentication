@@ -3,9 +3,9 @@ import random
 import time
 import os
 
-# from authenticator import login
-# from authenticator import signup
-# from authenticator import login_data
+from authenticator import login
+from authenticator import signup
+from authenticator import login_data
 
 
 countries = ['England', 'Ghana', 'America', 'Nigeria',
@@ -14,13 +14,20 @@ countries = ['England', 'Ghana', 'America', 'Nigeria',
             'Brazil', 'Egypt', 'Norway']
 
 
+def app_banner():
+    """
+    function to display banner for the game for the application
+    """
+    print("++++++++++++++++++++++++++++++++++++")
+    print("*** WELCOME TO THE WORLD GUESSING GAME ***")
+    print("++++++++++++++++++++++++++++++++++++")
 
 def game_banner():
     """
-    function to display banner for the game
+    Function to display the game and rules
     """
     print("++++++++++++++++++++++++++++++++++++")
-    print("*** WELCOME TO THE GUESSING GAME ***")
+    print("*** BRING ON YOUR BEST***")
     print("++++++++++++++++++++++++++++++++++++\n")
 
 
@@ -31,15 +38,29 @@ def login_check():
  
     userAnswer  = input("Do you already have an account? y/n\n")
     if userAnswer.lower() == 'y':
-        return 1
+        user_exist()
     elif userAnswer.lower() == 'n':
-        return 0
+        new_user() 
     else:
          print ("Please enter y or n")
 
-   
 
+
+def user_exist():
+    """
+    Checks if user already has login details
+    """
     
+    login(login_data())
+    game_banner()
+
+
+def new_user():
+    """
+    Allows new user to create username and password
+    """
+    signup()
+    game_banner()
 
 
 
@@ -131,12 +152,10 @@ def restart_game():
 
 
 def main():
-    game_banner()
+    app_banner()
     login_check()
-
-
-    #play_guess_country(select_random_word())
-    #restart_game()
+    play_guess_country(select_random_word())
+    restart_game()
 
 
 main()
