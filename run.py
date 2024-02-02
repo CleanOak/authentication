@@ -3,7 +3,8 @@ import random
 import time
 import os
 
-# from authenticator import userPrompt
+from authenticator import login
+from authenticator import signup
 
 
 countries = ['England', 'Ghana', 'America', 'Nigeria',
@@ -34,6 +35,13 @@ def login_check():
         return 0
     else:
          print ("Please enter y or n")
+
+    answer = login_check()
+    if answer == 1:
+        login(data)
+
+    elif answer == 0:
+        signup() 
     
 
     

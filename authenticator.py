@@ -19,8 +19,8 @@ SHEET = GSPREAD_CLIENT.open('Authenticate')
 
 
 
-user_info = SHEET.worksheet('user_info')
 
+user_info = SHEET.worksheet('user_info')
 data = user_info.get_all_values()
 
 
