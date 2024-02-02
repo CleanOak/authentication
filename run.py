@@ -3,7 +3,7 @@ import random
 import time
 import os
 
-from authenticator import userPrompt
+# from authenticator import userPrompt
 
 
 countries = ['England', 'Ghana', 'America', 'Nigeria',
@@ -17,14 +17,16 @@ def game_banner():
     """
     function to display banner for the game
     """
-    print("WELCOME TO THE GUESSING GAME")
+    print("++++++++++++++++++++++++++++++++++++")
+    print("*** WELCOME TO THE GUESSING GAME ***")
+    print("++++++++++++++++++++++++++++++++++++\n")
 
 
 def login_check():
     """
     Ask user if they have login credentials or not
     """
-      
+ 
     userAnswer  = input("Do you already have an account? y/n\n")
     if userAnswer.lower() == 'y':
         return 1
@@ -34,7 +36,7 @@ def login_check():
          print ("Please enter y or n")
     
 
-
+    
 
 
 
