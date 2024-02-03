@@ -150,7 +150,7 @@ def restart_game():
             print(f"\nGood Bye!!")
             time.sleep(1.5)
             print(f"\nLogging Out....")
-            time.sleep(3)
+            time.sleep(1)
             break
         else:
             print(f"Invalid input. Type Y/N")
