@@ -20,36 +20,39 @@ SHEET = GSPREAD_CLIENT.open('Authenticate')
 user_info = SHEET.worksheet('user_info')
 
 def login_data():
-     
+    """
+    Function to allow existing users to login
+    """
     data = user_info.get_all_values()
     return data
 
           
-def login(login_data):
-            
-            """
-            Get existing user credentials to login
-            """   
-            while True: 
+def login(login_data): 
+    """
+    Get existing user credentials to login
+    """  
+    while True:
 
-                print("Please enter your details below to login...\n")           
-                user_name = input("Enter your username: \n")
-                passwd = input("Enter password: \n")
-                try:
-                    for creds in login_data:
-                        if (user_name in creds[0] and passwd in creds[2]):  
-                            user1 = creds[0]
-                            passwd1 = creds[2]
-                
-                    if (user1 == user_name and passwd1 == passwd):
-                        print ("You have logged in sucessfully\n")
+        print("Please enter your details below to login...\n")           
+        user_name = input("Enter your username: \n")
+        passwd = input("Enter password: \n")
+        try:
+            for creds in login_data:
+                if (user_name in creds[0] and passwd in creds[2]):  
+                    user1 = creds[0]
+                    passwd1 = creds[2]     
+            if (user1 == user_name and passwd1 == passwd):
+                print ("You have logged in sucessfully\n")
 
-                        break                                
-                except:
-                    print("Your username or password does not match please try again\n")
+                break                                
+        except ValueError as v:
+            print("Your username or password does not match please try again\n", v)
 
 
 def update_spreadsheet(data):
+    """
+     Function to update google spreadsheet with user credentials
+    """
     try:
         print('Updating user info worksheet.\n')
         update_to_spreadsheet = SHEET.worksheet('user_info')
@@ -57,48 +60,42 @@ def update_spreadsheet(data):
         print('worksheet has updated successfully')
 
     except ValueError as e:
-          print(e)
+        print(e)
 
 
 def signup():
-            
-            """
-            Get new user details to create login credentials 
-            """
-            
-            while True:
+    """
+    Get new user details to create login credentials 
+    """
+    while True:
+        print("Follow the prompts to save your user information...\n")
+        new_username = input("Enter your username: \n")
 
-                
-                print("Follow the prompts to save your user information...\n")
-                new_username = input("Enter your username: \n")
+        print("Please enter an email with the format name@some_address.com")
+        email_address = input("Enter your email address: \n")   
 
-                print("Please enter an email with the format name@some_address.com")
-                email_address = input("Enter your email address: \n")   
+        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        if re.fullmatch(regex, email_address):
+            print("Email format accepted")
 
-                regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
-                
-                if (re.fullmatch(regex, email_address)):
-                    print("Email format accepted")
-
-                    break
-                else:
-                    print("Please enter a valid email format with the format name@some_address.com")
+            break
+        else:
+            print("Please enter a valid email format with the format name@some_address.com")
+                          
+    new_passwd = input("Enter password: \n")
+    conf_passwd = input("Confirm password: \n")
         
-                       
-            new_passwd = input("Enter password: \n")
-            conf_passwd = input("Confirm password: \n")
-                
-            if conf_passwd == new_passwd:
-                print("Password matched!")
-                
-                print(f'Your username {new_username} and password has been stored successfully!!!\n')
-    
-            else:
-                print("Please make sure both passwords matches!")
+    if conf_passwd == new_passwd:
+        print("Password matched!")
+        
+        print(f'Your username {new_username} and password has been stored successfully!!!\n')
 
-            data = [new_username,email_address,conf_passwd]
+    else:
+        print("Please make sure both passwords matches!")
 
-            update_spreadsheet(data)
+    data = [new_username,email_address,conf_passwd]
+
+    update_spreadsheet(data)
 
 
 
