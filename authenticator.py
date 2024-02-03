@@ -27,7 +27,7 @@ def login_data():
     return data
 
           
-def login(login_data): 
+def login(login_user_data): 
     """
     Get existing user credentials to login
     """  
@@ -37,10 +37,10 @@ def login(login_data):
         user_name = input("Enter your username: \n")
         passwd = input("Enter password: \n")
         try:
-            for creds in login_data:
-                if (user_name in creds[0] and passwd in creds[2]):  
+            for creds in login_user_data:
+                if (user_name in creds[0] and passwd in creds[2]):
                     user1 = creds[0]
-                    passwd1 = creds[2]     
+                    passwd1 = creds[2]
             if (user1 == user_name and passwd1 == passwd):
                 print ("You have logged in sucessfully\n")
 
@@ -81,7 +81,7 @@ def signup():
             break
         else:
             print("Please enter a valid email format with the format name@some_address.com")
-                          
+
     new_passwd = input("Enter password: \n")
     conf_passwd = input("Confirm password: \n")
         
