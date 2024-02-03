@@ -3,6 +3,8 @@ import random
 import time
 import os
 
+from colorama import Fore
+
 from authenticator import login
 from authenticator import signup
 from authenticator import login_data
@@ -18,7 +20,7 @@ def app_banner():
     """
     function to display banner for the game for the application
     """
-    print("+++++++++++++++++++++++++++++++++++++++++++")
+    print(Fore.GREEN + "+++++++++++++++++++++++++++++++++++++++++++")
     print("*** WELCOME TO THE WORLD GUESSING GAME ***")
     print("+++++++++++++++++++++++++++++++++++++++++++\n")
 
@@ -36,7 +38,7 @@ def login_check():
     Ask user if they have login credentials or not
     """
  
-    userAnswer  = input("Do you already have an account? y/n\n")
+    userAnswer  = input(Fore.WHITE + "Do you already have an account? y/n\n")
     if userAnswer.lower() == 'y':
         user_exist()
     elif userAnswer.lower() == 'n':
