@@ -62,7 +62,10 @@ def new_user():
     Allows new user to create username and password
     """
     signup()
+    login(login_data())
     game_banner()
+    
+    
 
 
 

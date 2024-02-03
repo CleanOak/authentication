@@ -5,6 +5,7 @@ from random import randint
 
 
 
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -31,7 +32,7 @@ def login(login_data):
             """   
             while True: 
 
-                print("Please enter your details below...\n")           
+                print("Please enter your details below to login...\n")           
                 user_name = input("Enter your username: \n")
                 passwd = input("Enter password: \n")
                 try:
@@ -41,7 +42,7 @@ def login(login_data):
                             passwd1 = creds[2]
                 
                     if (user1 == user_name and passwd1 == passwd):
-                        print ("You have logged in sucessfully")
+                        print ("You have logged in sucessfully\n")
 
                         break                                
                 except:
@@ -90,15 +91,16 @@ def signup():
             if conf_passwd == new_passwd:
                 print("Password matched!")
                 
-                print(f'Your username {new_username} and password has been stored successfully!!!')
-
-                
+                print(f'Your username {new_username} and password has been stored successfully!!!\n')
+    
             else:
                 print("Please make sure both passwords matches!")
 
             data = [new_username,email_address,conf_passwd]
 
             update_spreadsheet(data)
+
+
 
 
 
