@@ -55,6 +55,8 @@
 - User is able to play the game easily
 
 ## Technologies Used
+
+## Technical Design 
 ### Flowchart
 
 - [Lucidchart](https://www.lucidchart.com) was used to build flowchart
@@ -64,6 +66,24 @@
     <p>Hangman Game Flowchart</p>
     <img src = "assets/screenshots/flowchart.png" alt = "A screenshot of flowchart">
 </details>
+
+## Language Used
+ - Python
+
+## Libraries Used
+- os
+- random
+- re
+- gspread
+- google
+
+### Other websites/tools used
+
+- [GitHub](https://github.com/) was used for saving and storing files.
+- [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
+
+## Features
+ - 
 
 
 
