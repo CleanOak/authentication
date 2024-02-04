@@ -91,18 +91,18 @@ def play_guess_country(random_word):
 
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print(f"{guess} is already guessed!")              
-                print("\n Attempt left: {tries}\n")
+                print(f"{guess} is already guessed!")
+                print(f"\n Attempt left: {tries}\n")
             elif guess not in random_word:
                 print("\n You guessed wrong. Try Again")
                 tries -= 1
-                guessed_letters += guess             
+                guessed_letters += guess
                 print(f"\n Attempt left: {tries}\n")
             else:
-                print(f"\n Correct! {guess} is in the word.")           
+                print(f"\n Correct! {guess} is in the word.")
                 print(f"\n Attempt left: {tries}\n")
         else:
-            print("\n Invalid input. Enter only one alphabet")          
+            print("\n Invalid input. Enter only one alphabet")
             print(f"\n Attempt left: {tries}\n")
         guessed_letters += guess
 

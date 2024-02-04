@@ -83,6 +83,8 @@
 - [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
 
 ## Features
+
+## Login and SignUp
  - The first page welcomes the user to the game
  - Then User is asked if they already have an account or not
  - User gets a yes or no prompt for the program to proceed
@@ -96,11 +98,30 @@
 - User provides username, email and password
 - email is in the format example@address.com
 
+## Game page
+
 - Game page loads once the user username and passwords are validated
 
  <details>
     <summary>Home Page screenshot</summary>
     <img src="assets/screenshots/game_screen.png" alt="Game load page">
+</details> 
+
+## Game starts
+
+- User starts by guessing random letters that might form a country word
+- User has 10 tries to guess the correct country
+
+<details>
+    <summary>Home Page screenshot</summary>
+    <img src="assets/screenshots/game_starts.png" alt="Game load page">
+</details> 
+
+## Restart Game
+
+<details>
+    <summary>Home Page screenshot</summary>
+    <img src="assets/screenshots/game_starts.png" alt="Game load page">
 </details> 
 
 
