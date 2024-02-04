@@ -19,11 +19,7 @@
     2. [Frameworks & Tools](#frameworks-&-tools)
 4. [Features](#features)
 5. [Testing](#validation)
-    1. [HTML Validation](#HTML-validation)
-    2. [CSS Validation](#CSS-validation)
-    3. [Accessibility](#accessibility)
-    4. [Performance](#performance)
-    5. [Device testing](#performing-tests-on-various-devices)
+    1. [Application Testing](#performing-tests-on-various-devices)
 6. [Bugs](#Bugs)
 7. [Deployment](#deployment)
 8. [Credits](#credits)
@@ -82,6 +78,11 @@
 - [GitHub](https://github.com/) was used for saving and storing files.
 - [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
 
+<details>
+    <summary>Hosted App on Heroku</summary>
+    <img src="assets/screenshots/logout.png" alt="Game load page">
+</details> 
+
 ## Features
 
 ## Login and SignUp
@@ -103,7 +104,7 @@
 - Game page loads once the user username and passwords are validated
 
  <details>
-    <summary>Home Page screenshot</summary>
+    <summary>Game Page screenshot</summary>
     <img src="assets/screenshots/game_screen.png" alt="Game load page">
 </details> 
 
@@ -113,16 +114,42 @@
 - User has 10 tries to guess the correct country
 
 <details>
-    <summary>Home Page screenshot</summary>
+    <summary>Game Start Page screenshot</summary>
     <img src="assets/screenshots/game_starts.png" alt="Game load page">
 </details> 
 
 ## Restart Game
 
+- When User finish playin and wins there is a congratulation message
+- User is asked if they want to play again
+
 <details>
-    <summary>Home Page screenshot</summary>
-    <img src="assets/screenshots/game_starts.png" alt="Game load page">
+    <summary>Finish Page screenshot</summary>
+    <img src="assets/screenshots/finish_game.png" alt="Game load page">
 </details> 
+
+- If they selected yes for restart the game starts 
+
+<details>
+    <summary>Restart Page screenshot</summary>
+    <img src="assets/screenshots/restart.png" alt="Game load page">
+</details> 
+
+- If user decides to end the game by selecting no
+- A goodbye message is displayed and prompted the application is logging out
+
+<details>
+    <summary>Logout Page screenshot</summary>
+    <img src="assets/screenshots/logout.png" alt="Game load page">
+</details> 
+
+
+## Testing
+
+- Manual testing of user stories
+- Testing on Browsers
+- Tested Devices with Browsers
+- Validator Testing
 
 
 
@@ -130,23 +157,25 @@
 
 ## Credits
 
+- The Idea was from geeks for geeks [Geeks for Geeks](https://www.geeksforgeeks.org/python-program-for-word-guessing-game/)
+- Also some of the code was borrowd from [hangman-pp3](https://github.com/Sinha5714/hangman-pp3)
+
 ### Content
 - 
 
 ### Code
 #### The following ideas were borrowed from [Love Sandwiches](https://github.com/Sinha5714/Love_Sandwiches)
+####
 
 -  validate_user_details function
 -  How to import gspread
 -  How to import Credentials from google.oauth
-
-#### The following code idea was taken from google search and various youtube videos
-
-- 
-- 
+- [W3 Schools](https://validator.w3.org/nu/)
+- [Stack Overflow](https://validator.w3.org/nu/)
+- [hangman-pp3](https://github.com/Sinha5714/hangman-pp3)
 
 
-### Thank You
+## Acknowledgement
 - to my mentor Mo Shami for supporting me with his feedback through the entire project
-- special thanks to my husband Remo Liebetrau to help me finding out the issues in the game
-- to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
+- Special thanks to my friends Amoafo who is always ready to support me on the journey
+- Also to my dear wife for beign there for me eventhough I have to abandon some family duties
