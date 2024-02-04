@@ -96,6 +96,13 @@
 - User provides username, email and password
 - email is in the format example@address.com
 
+- Game page loads once the user username and passwords are validated
+
+ <details>
+    <summary>Home Page screenshot</summary>
+    <img src="assets/screenshots/game_screen.png" alt="Game load page">
+</details> 
+
 
 
 
