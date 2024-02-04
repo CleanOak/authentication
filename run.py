@@ -37,13 +37,15 @@ def login_check():
     """
     Ask user if they have login credentials or not
     """
-    user_answer  = input("Do you already have an account? y/n\n")
-    if user_answer.lower() == 'y':
-        user_exist()
-    elif user_answer.lower() == 'n':
-        new_user()
-    else:
-         print ("Please enter y or n")
+    while True:
+
+        user_answer  = input("Do you already have an account? y/n\n")
+        if user_answer.lower() == 'y':
+            user_exist()
+        elif user_answer.lower() == 'n':
+            new_user()
+        else:
+            print ("Please enter y or n")
 
 
 def user_exist():
