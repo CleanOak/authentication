@@ -14,26 +14,20 @@
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Requirements and Expectations](#user-requrements-and-expectations)
-3. [Design](#design)
-    1. [Design Choices](#design-choices)
-    2. [Colour](#colours)
-    3. [Fonts](#fonts)
-    4. [Structure](#structure)
-    5. [Wireframes](#wireframes)
-4. [Technologies Used](#technologies-used)
+3. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
-5. [Features](#features)
-6. [Testing](#validation)
+4. [Features](#features)
+5. [Testing](#validation)
     1. [HTML Validation](#HTML-validation)
     2. [CSS Validation](#CSS-validation)
     3. [Accessibility](#accessibility)
     4. [Performance](#performance)
     5. [Device testing](#performing-tests-on-various-devices)
-8. [Bugs](#Bugs)
-9. [Deployment](#deployment)
-10. [Credits](#credits)
-11. [Acknowledgements](#acknowledgements)
+6. [Bugs](#Bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 ## Project Goals
 ### User Stories
@@ -53,30 +47,24 @@
 
 
 ## User Experience
+### Target Audience
 
 - User is able to create an account 
 - User is able to login to the account
 - User is able to find the instructions
 - User is able to play the game easily
 
+## Technologies Used
+### Flowchart
 
+- [Lucidchart](https://www.lucidchart.com) was used to build flowchart
 
+<details>
+    <summary>Flowchart</summary>
+    <p>Hangman Game Flowchart</p>
+    <img src = "assets/screenshots/flowchart.png" alt = "A screenshot of flowchart">
+</details>
 
-
-
-### Forking the GitHub Repository
-1. Go to the GitHub repository
-2. Click on Fork button in top right corner
-3. You will then have a copy of the repository in your own GitHub account.
-4. [GitHub Repository](https://github.com/Sinha5714/hangman-pp3)
-
-### Cloning the repository in GitHub
-1. Visit the GitHub page of the website's repository
-2. Click the “Clone” button on top of the page
-3. Click on “HTTPS”
-4. Click on the copy button next to the link to copy it
-5. Open your IDE
-6. Type ```git clone <copied URL>``` into the terminal
 
 
 ## Credits
