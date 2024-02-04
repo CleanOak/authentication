@@ -40,15 +40,24 @@
 
 - Be able to sign up as new user
 - Be able to login as existing user
+- Be able read the rules of the game
+- Be able to play a simple game of country guessing game
 
 ### Site Owner Goals
-- Create a user account
-- Enter username, email and password
-- Login with username password
-- Cannot save same passwords and email
+- Ensure user is able to create a user account
+- Ensure user is able to enter username, email and password
+- Ensure user is able to Login with username password already created
+- Ensure user can read the instructions before playing the game
+- Ensure the game is intuitive
+- Ensure user is able to restart the game
+
 
 ## User Experience
-### 
+
+- User is able to create an account 
+- User is able to login to the account
+- User is able to find the instructions
+- User is able to play the game easily
 
 
 
