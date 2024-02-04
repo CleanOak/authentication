@@ -83,7 +83,20 @@
 - [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
 
 ## Features
- - 
+ - The first page welcomes the user to the game
+ - Then User is asked if they already have an account or not
+ - User gets a yes or no prompt for the program to proceed
+
+ <details>
+    <summary>Home Page screenshot</summary>
+    <img src="assets/screenshots/main_screen.png" alt="Game load page">
+</details> 
+
+- If user has no account, the no answer takes them to the signup page
+- User provides username, email and password
+- email is in the format example@address.com
+
+
 
 
 

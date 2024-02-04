@@ -42,6 +42,7 @@ def login_check():
         user_answer  = input("Do you already have an account? y/n\n")
         if user_answer.lower() == 'y':
             user_exist()
+            break
         elif user_answer.lower() == 'n':
             new_user()
         else:
