@@ -2,9 +2,9 @@
 
 (Developer: Morgan Asare)
 
-# Live website to be added here
+[Link to the website](https://worldguessinggame-6a1c3a2b64fc.herokuapp.com/)
 
-# Mockup page to be added here
+![An image previewing all devices](/assets/screenshots/preview.png)
 
 ## Table of Content
 
