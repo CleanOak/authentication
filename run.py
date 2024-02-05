@@ -48,7 +48,7 @@ def login_check():
             break
         else:
             print ("Please enter y or n")
-            
+
 def user_exist():
     """
     Checks if user already has login details
@@ -80,7 +80,8 @@ def play_guess_country(random_word):
     as the loop runs and validates if inputs by user is wrong and prompt
     users of the errors
     """
-    guessed_letters = "AEIOU"
+    guessed_letters = countries
+
     tries = 10
     print(f"Total Attempts: {tries}\n")
     print(" _ " * len(random_word))
@@ -136,7 +137,9 @@ def restart_game():
         if answer.upper() == "Y":
             print("\nTRY YOUR LUCK AGAIN!!")
             print("\nRestarting Game......")
-            time.sleep(2.5)
+            time.sleep(1)
+            print("Starting Game soon...")
+            time.sleep(1)
             play_guess_country(select_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
