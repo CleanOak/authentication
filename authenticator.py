@@ -38,28 +38,32 @@ def update_spreadsheet(data):
     print('worksheet has updated successfully\n')
 
           
-def login(login_user_data): 
+def login(login_user_data):
     """
     Get existing user credentials to login
     """
     while True:
-
-        print("Please enter your details below to login to the game....\n")           
+        print("Please enter your details below to login to the game....\n")  
+            
         user_name = input("Enter your username: \n")
         passwd = input("Enter password: \n")
+
         try:
+
             for creds in login_user_data:
                 if (user_name in creds[0] and passwd in creds[2]):
                     user1 = creds[0]
                     passwd1 = creds[2]
             if (user1 == user_name and passwd1 == passwd):
                 print ("You have logged in sucessfully\n")
-
-                break                                
+                break
+            else:
+                print("Your username or password does not match please try again\n")
+                 
         except ValueError as v:
             print("Your username or password does not match please try again\n", v)
-
-
+            
+       
     
 def signup():
     """
@@ -76,17 +80,37 @@ def signup():
         
         if re.fullmatch(regex, email_address):
                 
-            print("Email format accepted")
+            print("Email format accepted\n")
             break
             
         else:
             print("Please enter a valid email format with the format name@some_address.com")
-    
-    new_passwd = input("Enter password: \n")
+    while True:
+        print("Your password must be 8 characters long, must contain a capital letter(s),")
+        print("small letter(s) and at least a number and special characters")
+        print("For example:XdsE83&! \n")
+        
+       
+        new_passwd = input("Enter password:\n")
+            
+        #compiling regex
+        reg_pass = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$"
+        match_re = re.compile(reg_pass)
+
+        # searching regex
+        reg_search = re.search(match_re, new_passwd)
+
+        #validating conditions
+        if reg_search:
+            print("Password is valid") 
+            break
+        else:    
+            print("Password is invalid")
+
     conf_passwd = input("Confirm password: \n")
     if conf_passwd == new_passwd:
         print("Password matched!")
-            
+                    
         print(f'Your username {new_username} and password has been stored successfully!!!\n')
 
     else:
@@ -95,21 +119,3 @@ def signup():
     data = [new_username,email_address,conf_passwd]
 
     update_spreadsheet(data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
