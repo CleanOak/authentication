@@ -1,5 +1,6 @@
 # import from python library
 import re
+import time
 
 # imports from google librabry
 import gspread
@@ -19,7 +20,6 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCPOED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCPOED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Authenticate')
-
 user_info = SHEET.worksheet('user_info')
 
 def login_data():
@@ -33,10 +33,10 @@ def login_data():
 def login(login_user_data): 
     """
     Get existing user credentials to login
-    """  
+    """
     while True:
 
-        print("Please enter your details below to login...\n")           
+        print("Please enter your details below to login to the game....\n")           
         user_name = input("Enter your username: \n")
         passwd = input("Enter password: \n")
         try:
@@ -56,16 +56,11 @@ def update_spreadsheet(data):
     """
      Function to update google spreadsheet with user credentials
     """
-    try:
-        print('Updating user info worksheet.\n')
-        update_to_spreadsheet = SHEET.worksheet('user_info')
-        update_to_spreadsheet.append_row(data)
-        print('worksheet has updated successfully')
-
-    except ValueError as e:
-        print(e)
-
-
+    print('Updating user info worksheet.\n')
+    user_info.append_row(data)
+    time.sleep(0.5)
+    print('worksheet has updated successfully\n')
+    
 def signup():
     """
     Get new user details to create login credentials 
