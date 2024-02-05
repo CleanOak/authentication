@@ -8,8 +8,6 @@ from google.oauth2.service_account import Credentials
 
 
 
-
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -28,6 +26,16 @@ def login_data():
     """
     data = user_info.get_all_values()
     return data
+
+
+def update_spreadsheet(data):
+    """
+     Function to update google spreadsheet with user credentials
+    """
+    print('Updating user info worksheet.\n')
+    user_info.append_row(data)
+    time.sleep(0.5)
+    print('worksheet has updated successfully\n')
 
           
 def login(login_user_data): 
@@ -52,14 +60,6 @@ def login(login_user_data):
             print("Your username or password does not match please try again\n", v)
 
 
-def update_spreadsheet(data):
-    """
-     Function to update google spreadsheet with user credentials
-    """
-    print('Updating user info worksheet.\n')
-    user_info.append_row(data)
-    time.sleep(0.5)
-    print('worksheet has updated successfully\n')
     
 def signup():
     """
@@ -73,19 +73,20 @@ def signup():
         email_address = input("Enter your email address: \n")   
 
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        
         if re.fullmatch(regex, email_address):
+                
             print("Email format accepted")
-
             break
+            
         else:
             print("Please enter a valid email format with the format name@some_address.com")
-
+    
     new_passwd = input("Enter password: \n")
     conf_passwd = input("Confirm password: \n")
-        
     if conf_passwd == new_passwd:
         print("Password matched!")
-        
+            
         print(f'Your username {new_username} and password has been stored successfully!!!\n')
 
     else:
