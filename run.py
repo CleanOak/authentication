@@ -42,13 +42,13 @@ def login_check():
         user_answer  = input("Do you already have an account? y/n\n")
         if user_answer.lower() == 'y':
             user_exist()
+            break
         if user_answer.lower() == 'n':
             new_user()
             break
         else:
             print ("Please enter y or n")
-
-
+            
 def user_exist():
     """
     Checks if user already has login details
@@ -141,8 +141,10 @@ def restart_game():
         elif answer.upper() == "N":
             time.sleep(1.5)
             print("\nGood Bye!!")
-            time.sleep(1.5)
-            print("\nLogging Out....")
+            time.sleep(1)
+            print("\nLogging out......")
+            time.sleep(1)
+            print("\nYou have successfully logged out")
             time.sleep(1)
             break
         else:
