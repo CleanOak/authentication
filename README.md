@@ -290,6 +290,18 @@
     - Chrome
     - Safari
 
+### Bugs and Fixes
+
+| **Bugs** | **Fixes** |
+| ------- | ------- |
+| Users were able to sign up multiple times with same username | Add signup_check function which will prompt again if user exist or not|
+
+
+### Unfixed Bugs
+
+- No unfixed bugs
+- However, code (signup and login functions) can be made more efficient
+
 ## Deployment
 
 ### Deploying the website in Heroku:
