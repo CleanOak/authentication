@@ -172,7 +172,7 @@
 
 <details>
     <summary>Create App</summary>
-    <img src="assets/heroku/createapp.png" alt="Heroko create app screenshot">
+    <img src="assets/heroku/heroku_app.png" alt="Heroko create app screenshot">
 </details>
 
 #### Open settings Tab
@@ -182,7 +182,7 @@
 
 <details>
     <summary>Config var</summary>
-    <img src="assets/heroku/config.png" alt="Config var screenshot">
+    <img src="assets/heroku/config_vars.png" alt="Config var screenshot">
 </details>
 
   ##### Add Buildpacks
@@ -191,7 +191,7 @@
 
 <details>
     <summary>Buildpacks</summary>
-    <img src="assets/heroku/buildpacks.png" alt="Buildpacks screenshot">
+    <img src="assets/heroku/build_pack.png" alt="Buildpacks screenshot">
 </details>
 
  #### Open Deploy Tab
@@ -201,7 +201,7 @@
 
 <details>
     <summary>Deployment method</summary>
-    <img src="assets/heroku/method.png" alt="Deployment method screenshot">
+    <img src="assets/heroku/deploy_method.png" alt="Deployment method screenshot">
 </details>
 
    ##### Connect to Github
@@ -210,7 +210,7 @@
 
 <details>
     <summary> Repo Connect</summary>
-    <img src="assets/heroku/repo-connect.png" alt="Repo connect screenshot">
+    <img src="assets/heroku/connect_github.png" alt="Repo connect screenshot">
 </details>
 
   ##### Automatic and Manual deploy
@@ -219,7 +219,7 @@
 
 <details>
     <summary> Deploy methods</summary>
-    <img src="assets/heroku/deploy.png" alt="deploy method screenshot">
+    <img src="assets/heroku/auto_deploy.png" alt="deploy method screenshot">
 </details>
 
   ##### Final Deployment
@@ -228,7 +228,7 @@
 
 <details>
     <summary> Deploy</summary>
-    <img src="assets/heroku/view.png" alt="view screenshot">
+    <img src="assets/heroku/final_view.png" alt="view screenshot">
 </details>
 
 ## Credits
@@ -253,5 +253,5 @@
 
 ## Acknowledgement
 - to my mentor Mo Shami for supporting me with his feedback through the entire project
-- Special thanks to my friends Amoafo who is always ready to support me on the journey
+- Special thanks to my friend Amoafo who is always ready to support me on the journey
 - Also to my dear wife for beign there for me eventhough I have to abandon some family duties
