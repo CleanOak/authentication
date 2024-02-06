@@ -241,14 +241,7 @@
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Across all screen | User inputs invalid input when questions are prompted. User inputs invalid value during log-in or sign-up | Feedback message displayed to the user | Works as expected |
 
-<details>
-    <summary>Screenshots</summary>
-    <img src="assets/screenshots/us9.png" alt="User Exist area">
-    <img src="assets/screenshots/errorsignup.png" alt="Sign up area">
-    <img src="assets/screenshots/errorlogin.png" alt="Login area">
-    <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
-    <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
-</details>
+
 
 9. I want data entry to be validated, to guide the user on how to correctly format the input
 
@@ -256,14 +249,7 @@
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Across all screen | User inputs invalid data | Feedback message with instructions diplayed to the user | Works as expected |
 
-<details>
-    <summary>Screenshots</summary>
-    <img src="assets/screenshots/us9.png" alt="User Exist area">
-    <img src="assets/screenshots/signU9.png" alt="Sign up area">
-    <img src="assets/screenshots/loginUS9.png" alt="Login area">
-    <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
-    <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
-</details>
+
 
 10. I want user to see their name once they login
 
