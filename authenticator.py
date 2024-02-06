@@ -58,14 +58,20 @@ def login(login_user_data):
         except ValueError as v:
             print("Your username or password does not match please try again\n", v)
 
-def signup():
+def signup(user_data):
     """
     Get new user details to create login credentials 
     """
     while True:
         print("Follow the prompts to Sign up...\n")
         new_username = input("Enter your username: \n")
-
+        
+        for data in user_data:
+            if new_username == data[0]:
+                print("User exists please use a differnt username\n")
+                time.sleep(0.5)
+                signup(login_data())
+            break    
         print("Please enter an email with the format name@some_address.com")
         email_address = input("Enter your email address: \n")
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
