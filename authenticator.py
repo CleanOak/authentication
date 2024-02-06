@@ -42,29 +42,23 @@ def login(login_user_data):
     """
     Get existing user credentials to login
     """
-    while True:
-        print("Please enter your details below to login to the game....\n")  
+    x=0
+    while x==0:
+        print("Please enter your details below to login to the game....\n")
             
         user_name = input("Enter your username: \n")
         passwd = input("Enter password: \n")
-
         try:
-
-            for creds in login_user_data:
-                if (user_name in creds[0] and passwd in creds[2]):
-                    user1 = creds[0]
-                    passwd1 = creds[2]
-            if (user1 == user_name and passwd1 == passwd):
-                print ("You have logged in sucessfully\n")
-                break
-            else:
-                print("Your username or password does not match please try again\n")
-                 
+            for data in login_user_data:
+                if user_name == data[0]:
+                    if  passwd == data[2]:
+                        print("\nLogged in Sucessfully...")
+                        x= 1
+                    else:
+                        print("Incorrect password...")
         except ValueError as v:
             print("Your username or password does not match please try again\n", v)
-            
-       
-    
+
 def signup():
     """
     Get new user details to create login credentials 
@@ -74,8 +68,8 @@ def signup():
         new_username = input("Enter your username: \n")
 
         print("Please enter an email with the format name@some_address.com")
-        email_address = input("Enter your email address: \n")   
-
+        email_address = input("Enter your email address: \n")
+        
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
         
         if re.fullmatch(regex, email_address):
@@ -117,5 +111,6 @@ def signup():
         print("Please make sure both passwords matches!")
 
     data = [new_username,email_address,conf_passwd]
-
     update_spreadsheet(data)
+
+
