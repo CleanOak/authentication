@@ -177,7 +177,7 @@
 <details>
     <summary>Screenshots</summary>
     <p>Sign Up Area</p>
-    <img src="assets/screenshots/signup.png" alt="Sign up area">
+    <img src="assets/screenshots/signup_checks.png" alt="Sign up area">
     <p>Login area opens after sign up is confirmed</p>
     <img src="assets/screenshots/signup.png" alt="Login area">
 </details> 
