@@ -63,7 +63,7 @@ def signup():
     Get new user details to create login credentials 
     """
     while True:
-        print("Follow the prompts to save your user information...\n")
+        print("Follow the prompts to Sign up...\n")
         new_username = input("Enter your username: \n")
 
         print("Please enter an email with the format name@some_address.com")
