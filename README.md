@@ -67,13 +67,13 @@
  - Python
 
 ## Libraries Used
-- os
-- random
-- re
+- os - used to clear terminal
+- random - used to choose random words
+- re used for regex
 
 ### 3rd Party Python Libraries used
 - Google sheets API was used to store and check the user input and authorise the user identity
-- 
+- Google OAuth was used to connect the project with google account
 
 ### Other websites/tools used
 
@@ -107,7 +107,7 @@
 
  <details>
     <summary>Game Page screenshot</summary>
-    <img src="assets/screenshots/game_screen.png" alt="Game load page">
+    <img src="assets/screenshots/game_page.png" alt="Game load page">
 </details> 
 
 ## Game starts
