@@ -151,17 +151,93 @@
 - Tested Devices with Browsers
 - Validator Testing
 
+## Deployment
 
+## Deployment
 
+### Deploying the website in Heroku:
+- The website was deployed to Heroku using the following steps:
+#### Login or create an account at Heroku
+- Create a student account on Heroko and login
 
+<details>
+    <summary>Heroko Login Page</summary>
+    <img src="assets/heroku/heroku_login.png" alt="Heroko login page">
+</details>
+
+#### Creating an app
+  - Create new app in the top right of the screen and add an app name.
+  - Select region
+  - Then click "create app".
+
+<details>
+    <summary>Create App</summary>
+    <img src="assets/heroku/createapp.png" alt="Heroko create app screenshot">
+</details>
+
+#### Open settings Tab
+  ##### Click on config var
+  - Store CREDS file from gitpod in key and add the values
+  - Store PORT in key and value
+
+<details>
+    <summary>Config var</summary>
+    <img src="assets/heroku/config.png" alt="Config var screenshot">
+</details>
+
+  ##### Add Buildpacks
+  - Add python buildpack first
+  - Add Nodejs buildpack after that
+
+<details>
+    <summary>Buildpacks</summary>
+    <img src="assets/heroku/buildpacks.png" alt="Buildpacks screenshot">
+</details>
+
+ #### Open Deploy Tab
+   ##### Choose deployment method
+  - Connect GITHUB
+  - Login if prompted
+
+<details>
+    <summary>Deployment method</summary>
+    <img src="assets/heroku/method.png" alt="Deployment method screenshot">
+</details>
+
+   ##### Connect to Github
+  - Choose repositories you want to connect
+  - Click "Connect"
+
+<details>
+    <summary> Repo Connect</summary>
+    <img src="assets/heroku/repo-connect.png" alt="Repo connect screenshot">
+</details>
+
+  ##### Automatic and Manual deploy
+  - Choose a method to deploy
+  - After Deploy is clicked it will install various file
+
+<details>
+    <summary> Deploy methods</summary>
+    <img src="assets/heroku/deploy.png" alt="deploy method screenshot">
+</details>
+
+  ##### Final Deployment
+  - A view button will display
+  - Once clicked the website will open
+
+<details>
+    <summary> Deploy</summary>
+    <img src="assets/heroku/view.png" alt="view screenshot">
+</details>
 
 ## Credits
 
-- The Idea was from geeks for geeks [Geeks for Geeks](https://www.geeksforgeeks.org/python-program-for-word-guessing-game/)
-- Also some of the code was borrowd from [hangman-pp3](https://github.com/Sinha5714/hangman-pp3)
-
+- The Idea was from Geeks for Geeks [Geeks for Geeks](https://www.geeksforgeeks.org/python-program-for-word-guessing-game/)
+- Some of the code was borrowed from [hangman-pp3](https://github.com/Sinha5714/hangman-pp3)
+- Also, regex for validating passwords was borrowed from [Tutorialspoint](https://www.tutorialspoint.com/password-validation-in-python)
 ### Content
-- 
+- The idea of Guessing Game was taken from other word guessing games played around the world
 
 ### Code
 #### The following ideas were borrowed from [Love Sandwiches](https://github.com/Sinha5714/Love_Sandwiches)
