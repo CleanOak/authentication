@@ -179,7 +179,7 @@
     <p>Sign Up Area</p>
     <img src="assets/screenshots/signup.png" alt="Sign up area">
     <p>Login area opens after sign up is confirmed</p>
-    <img src="assets/screenshots/userstory2.png" alt="Login area">
+    <img src="assets/screenshots/signup.png" alt="Login area">
 </details> 
 
 3. I want to be able to log-in if I return to the game
@@ -191,26 +191,22 @@
 <details>
     <summary>Screenshots</summary>
     <p>Log In Area</p>
-    <img src="assets/screenshots/ustory1-login.png" alt="Login area">   
+    <img src="assets/screenshots/restart_quest.png" alt="Login area">   
     <p>Open rules is prompted after login is successful</p>
-    <img src="assets/screenshots/ustory3.png" alt="Open rules">
+    <img src="assets/screenshots/rules.png" alt="Open rules">
 </details> 
 
 4. I want to be able to read the rules of the game
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Open Rules  | Type Y/N| Y: Open rules/ N: Starts Game | Works as expected
+| Open Rules  | : Open rules Starts Game | Works as expected
 
 <details>
     <summary>Screenshots</summary>   
     <p>Open rules is prompted</p>
-    <img src="assets/screenshots/ustory3.png" alt="Open rules">
-    <p>If user input is "Y"</p>
-    <img src="assets/screenshots/rules.png" alt="Rules of the game">
-    <p>If user input is "N"</p>
-    <img src="assets/screenshots/gamestart.png" alt="Game started">
-</details> 
+    <img src="assets/screenshots/rules.png" alt="Open rules">
+    
 
 5. I want to be able to restart game when I'm logged in
 
@@ -221,25 +217,10 @@
 <details>
     <summary>Screenshots</summary>   
     <p>Restart is prompted</p>
-    <img src="assets/screenshots/restartq.png" alt="Restart Question">
+    <img src="assets/screenshots/restart.png" alt="Restart Question">
     <p>If user input is "Y"</p>
     <img src="assets/screenshots/restart.png" alt="Game restarts">
-    <p>If user input is "N"</p>
-    <img src ="assets/screenshots/ustory5.png" alt="Game ends">   
-</details>
-
-6. I want users to have a positive experience whilst playing the game
-
-| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
-| ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Across all screen | Simple navigation and game play  | Colored messages and straightforward instructions | Works as expected |
-
-<details>
-    <summary>Screenshots</summary>
-    <img src="assets/screenshots/ustory1-signup.png" alt="Sign up area">
-    <img src="assets/screenshots/userstory2.png" alt="Login area">
-    <img src="assets/screenshots/ustory3.png" alt="Open rules"> 
-    <img src="assets/screenshots/restartq.png" alt="Restart Question">
+    
 </details>
 
 7. I want user name and password to be saved to Google Spreadsheet
