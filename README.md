@@ -275,6 +275,12 @@
 - Macbook Pro 2019 16-inch
     - Chrome
     - Safari
+ 
+## Validator Testing
+### [PEP8 Python Validator] was used to validate the code
+
+- This validator was provided by Code institute
+- - no significant errors were found
 
 ### Bugs and Fixes
 
