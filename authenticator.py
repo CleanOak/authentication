@@ -2,6 +2,7 @@
 import re
 import time
 
+
 # imports from google librabry
 import gspread
 from google.oauth2.service_account import Credentials
@@ -81,7 +82,7 @@ def signup(user_data):
             break    
         print("Please enter an email with the format name@some_address.com")
         email_address = input("Enter your email address: \n")
-        regex = '\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'
+        regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'
         
         if re.fullmatch(regex, email_address):
                 
@@ -97,7 +98,7 @@ def signup(user_data):
         new_passwd = input("Enter password:\n")
         
         #compiling regex
-        reg_pass = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$'
+        reg_pass = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$'
         match_re = re.compile(reg_pass)
 
         # searching regex
