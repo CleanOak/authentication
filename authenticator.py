@@ -46,6 +46,10 @@ def login(login_user_data):
     while x==0:
         print("Please enter your details below to login to the game....\n")
         user_name = input("Enter your username: \n")
+        while user_name == " "
+            print("Please enter a valid username")
+            break        
+            
         passwd = input("Enter password: \n")
         try:
             for data in login_user_data:
@@ -74,7 +78,7 @@ def signup(user_data):
             break    
         print("Please enter an email with the format name@some_address.com")
         email_address = input("Enter your email address: \n")
-        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        regex = r("\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b")
         
         if re.fullmatch(regex, email_address):
                 
