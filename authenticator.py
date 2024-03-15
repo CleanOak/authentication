@@ -47,14 +47,13 @@ def login(login_user_data):
         print("Please enter your details below to login to the game....\n")
 
         while True:
-            try:
-                user_name = input("Enter your username: \n")
-                if user_name == " "
+            user_name = input("Enter your username: \n")
+            if user_name == " ":
                 print ("Please Enter a valid username")
-                
-            except ValueError:
-                print("Please Enter a valid username")
                 continue
+            else:
+                break
+                
             
         passwd = input("Enter password: \n")
         try:
