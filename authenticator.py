@@ -47,7 +47,7 @@ def login(login_user_data):
         print("Please enter your details below to login to the game....\n")
 
         while True:
-            try
+            try:
                 user_name = input("Enter your username: \n")
                 if user_name == " "
                 print ("Please Enter a valid username")
