@@ -51,10 +51,10 @@ def login(login_user_data):
                 user_name = input("Enter your username: \n")
                 if user_name == " "
                 print ("Please Enter a valid username")
-
+                
             except ValueError:
                 print("Please Enter a valid username")
-                break
+                continue
             
         passwd = input("Enter password: \n")
         try:
