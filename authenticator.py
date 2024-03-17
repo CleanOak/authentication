@@ -75,58 +75,61 @@ def signup(user_data):
             signup(login_data())
             break
 
-        for data in user_data:
-            if new_username == data[0]:
-                print("User exists please use a differnt username\n")
-                time.sleep(0.5)
-                signup(login_data())
-                continue    
-        # except ValueError as v:
-        #     print("Please enter a valid username or password")
-    
-    while True:
-        print("Please enter an email with the format name@some_address.com")
-        email_address = input("Enter your email address: \n")
         try:
-            regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'   
-
-            if re.fullmatch(regex, email_address):  
-                print("Email format accepted\n")
-                break
-            else:
-                print("Please enter a valid email format with the format name@some_address.com")
-
+            for data in user_data:
+                if new_username == data[0]:
+                    print("User exists please use a differnt username\n")
+                    time.sleep(0.5)
+                    # signup(login_data())
+                    continue    
         except ValueError as v:
             print("Please enter a valid username or password")
 
+        finally:
+            
+            while True:
+                print("Please enter an email with the format name@some_address.com")
+                email_address = input("Enter your email address: \n")
+                try:
+                    regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'   
 
-    while True:
-        print("Your password must be 8 characters long, must contain a capital letter(s),")
-        print("small letter(s) and at least a number and special characters")
-        print("For example:XdsE83&! \n")
-        new_passwd = input("Enter password:\n")
-        
-        #compiling regex
-        reg_pass = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$'
-        match_re = re.compile(reg_pass)
+                    if re.fullmatch(regex, email_address):  
+                        print("Email format accepted\n")
+                        break
+                    else:
+                        print("Please enter a valid email format with the format name@some_address.com")
 
-        # searching regex
-        reg_search = re.search(match_re, new_passwd)
+                except ValueError as v:
+                    print("Please enter a valid username or password")
 
-        #validating conditions
-        if reg_search:
-            print("Password is valid")
-            break
-        else:
-            print("Password is invalid")
 
-    conf_passwd = input("Confirm password: \n")
-    if conf_passwd == new_passwd:
-        print("Password matched!\n")
-        print(f'Your username {new_username} and password has been stored successfully!!!\n')
+            while True:
+                print("Your password must be 8 characters long, must contain a capital letter(s),")
+                print("small letter(s) and at least a number and special characters")
+                print("For example:XdsE83&! \n")
+                new_passwd = input("Enter password:\n")
+                
+                #compiling regex
+                reg_pass = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$'
+                match_re = re.compile(reg_pass)
 
-    else:
-        print("Please make sure both passwords matches!")
+                # searching regex
+                reg_search = re.search(match_re, new_passwd)
 
-    data = [new_username,email_address,conf_passwd]
-    update_spreadsheet(data)
+                #validating conditions
+                if reg_search:
+                    print("Password is valid")
+                    break
+                else:
+                    print("Password is invalid")
+
+            conf_passwd = input("Confirm password: \n")
+            if conf_passwd == new_passwd:
+                print("Password matched!\n")
+                print(f'Your username {new_username} and password has been stored successfully!!!\n')
+
+            else:
+                print("Please make sure both passwords matches!")
+
+            data = [new_username,email_address,conf_passwd]
+            update_spreadsheet(data)
