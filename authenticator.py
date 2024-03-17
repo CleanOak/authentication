@@ -48,12 +48,7 @@ def login(login_user_data):
         print("Please enter your details below to login to the game....\n")
 
         # while True:
-        user_name = input("Enter your username: \n")
-            # if user_name == " ":
-            #     print ("Please Enter a valid username")
-            # else:
-            #     break
-                    
+        user_name = input("Enter your username: \n")            
         passwd = input("Enter password: \n")
         try:
             for data in login_user_data:
@@ -75,11 +70,13 @@ def signup(user_data):
         new_username = input("Enter your username: \n")
         
         for data in user_data:
-            if new_username == data[0]:
-                print("User exists please use a differnt username\n")
-                time.sleep(0.5)
-                signup(login_data())
-            break    
+            if new_user == "":
+                print("Please enter a valid value for the username\n")
+                if new_username == data[0]:
+                    print("User exists please use a differnt username\n")
+                    time.sleep(0.5)
+                    signup(login_data())
+                    break    
         print("Please enter an email with the format name@some_address.com")
         email_address = input("Enter your email address: \n")
         regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'
