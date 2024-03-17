@@ -87,8 +87,7 @@ def signup(user_data):
 
         if re.fullmatch(regex, email_address):  
             print("Email format accepted\n")
-        break
-        
+            break
         else:
             print("Please enter a valid email format with the format name@some_address.com")
     while True:
