@@ -80,8 +80,8 @@ def signup(user_data):
                 if new_username == data[0]:
                     print("User exists please use a differnt username\n")
                     time.sleep(0.5)
-                    # signup(login_data())
-                    continue    
+                    signup(login_data())
+                    break    
         except ValueError as v:
             print("Please enter a valid username or password")   
 
