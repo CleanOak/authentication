@@ -74,11 +74,7 @@ def signup(user_data):
             time.sleep(0.5)
             signup(login_data())
             break
-
-
-    while True:
-        # print("Follow the prompts to Sign up...\n")
-        # new_username = input("Enter your username: \n") 
+            
         try:
             for data in user_data:
                 if new_username == data[0]:
