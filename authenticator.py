@@ -83,9 +83,7 @@ def signup(user_data):
                     # signup(login_data())
                     continue    
         except ValueError as v:
-            print("Please enter a valid username or password")
-
-        
+            print("Please enter a valid username or password")   
 
     print("Please enter an email with the format name@some_address.com")
     email_address = input("Enter your email address: \n")
@@ -94,7 +92,6 @@ def signup(user_data):
 
     if re.fullmatch(regex, email_address):  
         print("Email format accepted\n")
-        break
     else:
         print("Please enter a valid email format with the format name@some_address.com")
 
