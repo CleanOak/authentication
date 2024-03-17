@@ -83,14 +83,14 @@ def signup(user_data):
         #             break    
             print("Please enter an email with the format name@some_address.com")
             email_address = input("Enter your email address: \n")
-        regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'   
-        if re.fullmatch(regex, email_address):
+            regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'   
+            if re.fullmatch(regex, email_address):
                 
             print("Email format accepted\n")
             break
             
-        else:
-            print("Please enter a valid email format with the format name@some_address.com")
+            else:
+                print("Please enter a valid email format with the format name@some_address.com")
     while True:
         print("Your password must be 8 characters long, must contain a capital letter(s),")
         print("small letter(s) and at least a number and special characters")
