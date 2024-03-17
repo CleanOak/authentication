@@ -70,8 +70,11 @@ def signup(user_data):
         new_username = input("Enter your username: \n")
 
         if new_username == "":
-                print("Please enter a valid value for the username...\n")
-                break
+            print("Please enter a valid value for the username...\n")
+            time.sleep(0.5)
+            signup(login_data())
+            break
+
 
     while True:
         # print("Follow the prompts to Sign up...\n")
