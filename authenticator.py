@@ -71,7 +71,7 @@ def signup(user_data):
         try:
             for data in user_data:
                 if new_username == "":
-                    # print("Please enter a valid value for the username...\n")
+                    print("Please enter a valid value for the username...\n")
                     break
         except ValueError as v:
             print("Please enter a valid value for the username\n")
