@@ -98,9 +98,6 @@ def signup(user_data):
             else:
                 print("Please enter a valid email format with the format name@some_address.com")
 
-                
-
-
     while True:
         print("Your password must be 8 characters long, must contain a capital letter(s),")
         print("small letter(s) and at least a number and special characters")
