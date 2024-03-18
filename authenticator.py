@@ -44,13 +44,15 @@ def login(login_user_data):
     """
     Get existing user credentials to login
     """
-    x=0
-    while x==0:
+    # x=0
+    # while x==0:
+    while True:
         print("Please enter your details below to login to the game....\n")
         user_name = input("Enter your username: \n")
         
         if user_name in (None , ''):
             print("Please Enter your username")
+            login(login_user_data)
             break
         passwd = input("Enter your password")
         try:
