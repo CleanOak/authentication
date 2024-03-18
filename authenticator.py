@@ -71,17 +71,19 @@ def signup(user_data):
 
         if new_username == "":
             print("Please enter a valid value for the username...\n")
+            break
             time.sleep(0.5)
             signup(login_data())
-            break
+            
 
         try:
             for data in user_data:
                 if new_username == data[0]:
                     print("User exists please use a differnt username\n")
+                    break    
                     time.sleep(0.5)
                     signup(login_data())
-                    break    
+                    
         except ValueError as v:
             print("Please enter a valid username or password")   
 
