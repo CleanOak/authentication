@@ -79,19 +79,19 @@ def signup(user_data):
                 time.sleep(0.5)
                 signup(login_data())
                 break
-                
-        while True:
 
-            print("Please enter an email with the format name@some_address.com")
-            email_address = input("Enter your email address: \n")
-            
-            regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'   
+    while True:
 
-            if re.fullmatch(regex, email_address):  
-                print("Email format accepted\n")
-                break
-            else:
-                print("Please enter a valid email format with the format name@some_address.com")
+        print("Please enter an email with the format name@some_address.com")
+        email_address = input("Enter your email address: \n")
+        
+        regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'   
+
+        if re.fullmatch(regex, email_address):  
+            print("Email format accepted\n")
+            break
+        else:
+            print("Please enter a valid email format with the format name@some_address.com")
             
 
     while True:
