@@ -106,7 +106,7 @@ def signup(user_data):
         new_passwd = input("Enter password:\n")
         
         #compiling regex
-        reg_pass = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$'
+        reg_pass = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?& ])[A-Za-z\d@$!#%*?&]{8,18}$'
         match_re = re.compile(reg_pass)
 
         # searching regex
