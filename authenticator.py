@@ -87,8 +87,6 @@ def signup(user_data):
         
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'   
 
-    while True:
-        
         if re.fullmatch(regex, email_address):  
             print("Email format accepted\n")
             break
