@@ -50,7 +50,7 @@ def login(login_user_data):
         user_name = input("Enter your username: \n")
         passwd = input("Enter your password")
 
-        if user_name = (None , ''):
+        if user_name == (None , ''):
             print("Please Enter your username")
             break
         try:
