@@ -1,7 +1,6 @@
 # import from python library
 import re
 import time
-from builtins import str
 
 
 # imports from google librabry
