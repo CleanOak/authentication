@@ -48,11 +48,11 @@ def login(login_user_data):
     while x==0:
         print("Please enter your details below to login to the game....\n")
         user_name = input("Enter your username: \n")
-        passwd = input("Enter your password")
-
+        
         if user_name in (None , ''):
             print("Please Enter your username")
             break
+        passwd = input("Enter your password")
         try:
             for data in login_user_data:
                 if user_name == data[0]:
