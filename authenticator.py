@@ -72,9 +72,7 @@ def signup(user_data):
         if new_username in (None, ''):
             print("Please Enter a valid username\n")
             signup(login_data())
-            break           
-        #     time.sleep(0.5)
-               
+            break                      
         for data in user_data:
             if new_username == data[0]:
                 print("User exists please use a differnt username\n")  
@@ -92,7 +90,7 @@ def signup(user_data):
             break
         else:
             print("Please enter a valid email format with the format name@some_address.com")
-            break
+            
 
     while True:
         print("Your password must be 8 characters long, must contain a capital letter(s),")
