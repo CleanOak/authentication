@@ -47,13 +47,16 @@ def login(login_user_data):
     x=0
     while x==0:
         print("Please enter your details below to login to the game....\n")
+        user_name = input("Enter your username: \n")
 
-        # while True:
-        user_name = input("Enter your username: \n")            
-        passwd = input("Enter password: \n")
+        # if user_name = (None , ''):
+        #     print("Please Enter your username")
+        #     break
         try:
             for data in login_user_data:
                 if user_name == data[0]:
+                    print("Please Enter your username")
+                    
                     if  passwd == data[2]:
                         print(f"Hello {user_name}, you have logged in sucessfully...")
                         x= 1
