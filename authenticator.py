@@ -1,6 +1,7 @@
 # import from python library
 import re
 import time
+from builtins import str
 
 
 # imports from google librabry
@@ -69,25 +70,25 @@ def signup(user_data):
         print("Follow the prompts to Sign up...\n")
         new_username = input("Enter your username: \n")
 
-        if new_username !== "" and type(new_username) is str:
+        if type(new_username) == str:
             print("Username is valid\n")
             break
         else:
-            print("Please Enter a valid username")
-            
-        else:            
-            # time.sleep(0.5)
-            # signup(login_data())
-            try:
-                for data in user_data:
-                    if new_username == data[0]:
-                        print("User exists please use a differnt username\n")
-                        break    
-                        time.sleep(0.5)
-                        signup(login_data())
-                        
-            except ValueError as v:
-                print("Please enter a valid username or password")   
+            print("Please Enter a valid username")            
+            time.sleep(0.5)
+            signup(login_data())
+        try:
+            for data in user_data:
+                if new_username == data[0]:
+                    print("User exists please use a differnt username\n")
+                    break    
+                    time.sleep(0.5)
+                    signup(login_data())
+                    
+        except ValueError as v:
+            print("Please enter a valid username or password")   
+
+    while True:
 
         print("Please enter an email with the format name@some_address.com")
         email_address = input("Enter your email address: \n")
