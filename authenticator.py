@@ -80,7 +80,7 @@ def signup(user_data):
                 print("User exists please use a differnt username\n")  
                 time.sleep(0.5)
                 signup(login_data())
-                # break
+                break
                     
 
     print("Please enter an email with the format name@some_address.com")
