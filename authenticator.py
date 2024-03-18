@@ -79,7 +79,7 @@ def signup(user_data):
                 print("User exists please use a differnt username\n")  
                 time.sleep(0.5)
                 signup(login_data())
-            break
+                break
                     
     # while True:
 
