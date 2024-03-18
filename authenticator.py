@@ -72,30 +72,29 @@ def signup(user_data):
         if new_username == "":
             print("Please enter a valid value for the username...\n")
             break
-            time.sleep(0.5)
-            signup(login_data())
-            
+        else:            
+            # time.sleep(0.5)
+            # signup(login_data())
+            try:
+                for data in user_data:
+                    if new_username == data[0]:
+                        print("User exists please use a differnt username\n")
+                        break    
+                        time.sleep(0.5)
+                        signup(login_data())
+                        
+            except ValueError as v:
+                print("Please enter a valid username or password")   
 
-        try:
-            for data in user_data:
-                if new_username == data[0]:
-                    print("User exists please use a differnt username\n")
-                    break    
-                    time.sleep(0.5)
-                    signup(login_data())
-                    
-        except ValueError as v:
-            print("Please enter a valid username or password")   
+        print("Please enter an email with the format name@some_address.com")
+        email_address = input("Enter your email address: \n")
+        
+        regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'   
 
-    print("Please enter an email with the format name@some_address.com")
-    email_address = input("Enter your email address: \n")
-    
-    regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,7}\b'   
-
-    if re.fullmatch(regex, email_address):  
-        print("Email format accepted\n")
-    else:
-        print("Please enter a valid email format with the format name@some_address.com")
+        if re.fullmatch(regex, email_address):  
+            print("Email format accepted\n")
+        else:
+            print("Please enter a valid email format with the format name@some_address.com")
 
     while True:
         print("Your password must be 8 characters long, must contain a capital letter(s),")
