@@ -85,6 +85,7 @@ def signup(user_data):
                     
         except ValueError as v:
             print("Please enter a valid username or password")   
+            break
 
     while True:
 
