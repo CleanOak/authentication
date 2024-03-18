@@ -44,8 +44,6 @@ def login(login_user_data):
     """
     Get existing user credentials to login
     """
-    # x=0
-    # while x==0:
     while True:
         print("Enter Your Details Below to login to the game\n")
         user_name = input("Enter your username: \n")
@@ -54,7 +52,7 @@ def login(login_user_data):
             print("Enter your username to login..")
             login(login_user_data)
             break
-        passwd = input("Enter your password")
+        passwd = input("Enter your password: \n")
         try:
             for data in login_user_data:
                 if user_name == data[0]:
