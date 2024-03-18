@@ -58,7 +58,8 @@ def login(login_user_data):
                 if user_name == data[0]:
                     if  passwd == data[2]:
                         print(f"Hello {user_name}, you have logged in sucessfully...")
-                        x= 1
+                        break
+                        # x= 1
                     else:
                         print("Incorrect password...")
         except ValueError as v:
