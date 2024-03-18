@@ -44,7 +44,8 @@ def login(login_user_data):
     """
     Get existing user credentials to login
     """
-    while True:
+    x=0
+    while x==0:
         print("Enter Your Details Below to login to the game\n")
         user_name = input("Enter your username: \n")
         
@@ -58,8 +59,7 @@ def login(login_user_data):
                 if user_name == data[0]:
                     if  passwd == data[2]:
                         print(f"Hello {user_name}, you have logged in sucessfully...")
-                        break
-                        # x= 1
+                        x= 1
                     else:
                         print("Incorrect password...")
         except ValueError as v:
