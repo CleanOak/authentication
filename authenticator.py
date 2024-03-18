@@ -50,14 +50,12 @@ def login(login_user_data):
         user_name = input("Enter your username: \n")
         passwd = input("Enter your password")
 
-        # if user_name = (None , ''):
-        #     print("Please Enter your username")
-        #     break
+        if user_name = (None , ''):
+            print("Please Enter your username")
+            break
         try:
             for data in login_user_data:
                 if user_name == data[0]:
-                    print("Please Enter your username")
-                    break
                     if  passwd == data[2]:
                         print(f"Hello {user_name}, you have logged in sucessfully...")
                         x= 1
