@@ -82,7 +82,7 @@ def signup(user_data):
                 signup(login_data())
                 break
                     
-    # while True:
+    while True:
 
         print("Please enter an email with the format name@some_address.com")
         email_address = input("Enter your email address: \n")
