@@ -120,11 +120,10 @@ def signup(user_data):
         if conf_passwd == new_passwd:
             print("Password matched!\n")
             print(f'Your username {new_username} and password has been stored successfully!!!\n')
-            
+
         else:
             print("Please make sure both passwords matches!")
             
-
         data = [new_username,email_address,conf_passwd]
         update_spreadsheet(data)
-        
+        break
