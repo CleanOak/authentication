@@ -125,5 +125,6 @@ def signup(user_data):
         else:
             print("Please make sure both passwords matches!")
 
-    data = [new_username,email_address,conf_passwd]
-    update_spreadsheet(data)
+        data = [new_username,email_address,conf_passwd]
+        update_spreadsheet(data)
+        break
