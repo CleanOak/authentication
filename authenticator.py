@@ -70,23 +70,21 @@ def signup(user_data):
         print("Follow the prompts to Sign up...\n")
         new_username = input("Enter your username: \n")
 
-        if type(new_username) == str:
-            print("Username is valid\n")
-            break
-        else:
-            print("Please Enter a valid username")            
+        if new_username in (None, ''):
+            print("Please Enter a valid username\n")
+            break           
             time.sleep(0.5)
             signup(login_data())
-        try:
-            for data in user_data:
-                if new_username == data[0]:
-                    print("User exists please use a differnt username\n")
-                    break    
-                    time.sleep(0.5)
-                    signup(login_data())
+        # try:
+        #     for data in user_data:
+        #         if new_username == data[0]:
+        #             print("User exists please use a differnt username\n")
+        #             break    
+        #             time.sleep(0.5)
+        #             signup(login_data())
                     
-        except ValueError as v:
-            print("Please enter a valid username or password")   
+        # except ValueError as v:
+        #     print("Please enter a valid username or password")   
 
 
     print("Please enter an email with the format name@some_address.com")
