@@ -1,5 +1,6 @@
 # imports from python library
 import time
+import random
 
 
 def level_banner():

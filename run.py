@@ -1,5 +1,4 @@
 # imports from python library
-import random
 import time
 import os
 
