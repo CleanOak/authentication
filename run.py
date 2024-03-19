@@ -8,6 +8,8 @@ import os
 from authenticator import login
 from authenticator import signup
 from authenticator import login_data
+from game import level_banner
+from game import choose_level
 
 # A list of countries to be chosen at random
 countries = ['England', 'Ghana', 'America', 'Nigeria',
@@ -173,6 +175,7 @@ def main():
     """
     app_banner()
     login_check()
+    choose_level()
     play_guess_country(select_random_word())
     restart_game()
 
