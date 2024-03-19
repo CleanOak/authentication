@@ -11,11 +11,6 @@ from game import level_banner
 from game import choose_level
 from game import play_guess_advanced
 
-# A list of countries to be chosen at random
-countries = ['England', 'Ghana', 'America', 'Nigeria',
-             'Italy', 'China', 'Mali', 'Russia',
-             'Argentina', 'Jamaica', 'Canada',
-            'Brazil', 'Egypt', 'Norway']
 
 
 def app_banner():

@@ -2,6 +2,12 @@
 import time
 import random
 
+# A list of countries to be chosen at random
+countries = ['England', 'Ghana', 'America', 'Nigeria',
+             'Italy', 'China', 'Mali', 'Russia',
+             'Argentina', 'Jamaica', 'Canada',
+            'Brazil', 'Egypt', 'Norway']
+
 
 def level_banner():
     """
