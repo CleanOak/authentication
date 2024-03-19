@@ -16,7 +16,7 @@ def choose_level():
     """
     while True:
 
-        user_input = input("Please input E or A to select a level...")
+        user_input = input("Please input E or A to select a level...\n")
         if user_input.lower() == 'e':
             print("This is Easy Level\n")
             play_guess_advanced()
