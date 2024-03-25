@@ -3,7 +3,7 @@ import time
 import os
 
 
-#internal imports from exiting python file
+# internal imports from exiting python file
 from authenticator import login
 from authenticator import signup
 from authenticator import login_data
