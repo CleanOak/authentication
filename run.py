@@ -7,9 +7,7 @@ import os
 from authenticator import login
 from authenticator import signup
 from authenticator import login_data
-from game import level_banner
 from game import choose_level
-from game import play_guess_advanced
 
 
 

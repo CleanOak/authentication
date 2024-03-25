@@ -1,5 +1,5 @@
 # imports from python library
-import time
+
 import random
 
 # A list of countries to be chosen at random
@@ -87,6 +87,7 @@ def play_guess_easy(random_word):
         if wrong_letter_count == 0:
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
+            print(f"You scored: {tries * 10} points")
             break
         if tries == 0:
             print("\n")
@@ -147,4 +148,9 @@ def play_guess_advanced(random_word):
             print (f"The correct word is {random_word}.\n")
 
     return tries
+
+ 
+# def easy_leaderboard():
+    # play_guess_easy()
+
 
