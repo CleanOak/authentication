@@ -1,6 +1,38 @@
 # imports from python library
-
 import random
+
+# imports from google librabry
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCPOED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCPOED_CREDS)
+SHEET = GSPREAD_CLIENT.open('Authenticate')
+leadboard_easy = SHEET.worksheet('leadboard_easy')
+leadboard_adv = SHEET.worksheet('leadboard_adv')
+
+def scores_data():
+    """
+    function to collect scores from users
+    """
+    score = leadboard_easy.get_all_values()
+
+    return score
+
+def update_score_sheet (scores):
+    """
+    function to update scoresheet 
+    """
+    leadboard_easy.append_row(scores)
+
+
 
 # A list of countries to be chosen at random
 countries = ['England', 'Ghana', 'America', 'Nigeria',
