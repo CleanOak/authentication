@@ -134,9 +134,8 @@ def play_guess_easy(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
-            player = login
-            # str(tries * 10),
-            easy_score = [ player]
+            # player = login
+            easy_score = [str(tries * 10)]
             update_easy_score_sheet(easy_score)
 
             break
