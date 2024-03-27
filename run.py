@@ -37,7 +37,6 @@ def game_banner():
     print("If the random alphabet is in the country word, user receives a correct prompt")
     time.sleep(0.5)
     print("If the letter is wrong and not in the country word the number of tries reduces until zero\n\n")
-
     print("Game Starts Now...")
     
 def login_check():

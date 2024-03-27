@@ -38,7 +38,8 @@ def update_easy_score_sheet(scores):
     """
     function to update scoresheet 
     """
-    leadboard_easy.append_row(scores)
+    for x in scores:
+        leadboard_easy.append_row(x[1])
 
 def update_adv_score_sheet(scores):
     """
@@ -200,7 +201,6 @@ def play_guess_advanced(random_word):
     return tries
 
  
-# def easy_leaderboard():
-    # play_guess_easy()
+
 
 
