@@ -18,20 +18,32 @@ SHEET = GSPREAD_CLIENT.open('Authenticate')
 leadboard_easy = SHEET.worksheet('leadboard_easy')
 leadboard_adv = SHEET.worksheet('leadboard_adv')
 
-def scores_data():
+def easy_scores_data():
     """
     function to collect scores from users
     """
-    score = leadboard_easy.get_all_values()
+    easy_score = leadboard_easy.get_all_values()
 
-    return score
+    return easy_score
 
-def update_score_sheet (scores):
+
+def advance_scores_data():
+    """
+    function to collect scores from users
+    """
+    adv_score = leadboard_adv.get_all_values()
+
+    return adv_score
+
+
+def update_score_sheet(scores):
     """
     function to update scoresheet 
     """
-    leadboard_easy.append_row(scores)
-
+    if (scores == "easy_score"):
+        leadboard_easy.append_row(scores)
+    elif (scores == "adv_score"):
+        leadboard_adv.append_row(scores)
 
 
 # A list of countries to be chosen at random
@@ -120,6 +132,9 @@ def play_guess_easy(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
+            easy_score = input(tries * 10)
+            update_score_sheet(easy_score)
+
             break
         if tries == 0:
             print("\n")
