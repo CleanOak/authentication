@@ -5,6 +5,8 @@ import random
 import gspread
 from google.oauth2.service_account import Credentials
 
+from authenticator import login
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -38,8 +40,7 @@ def update_easy_score_sheet(scores):
     """
     function to update scoresheet 
     """
-    for x in scores:
-        leadboard_easy.append_row(x[1])
+    leadboard_easy.append_row(scores)
 
 def update_adv_score_sheet(scores):
     """
@@ -133,7 +134,8 @@ def play_guess_easy(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
-            easy_score = [tries * 10]
+            player = login
+            easy_score = [tries * 10, player]
             update_easy_score_sheet(easy_score)
 
             break
