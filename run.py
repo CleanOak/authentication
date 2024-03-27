@@ -106,7 +106,7 @@ def main():
     """
     app_banner()
     login_check()
-    choose_level() 
+    choose_level()
     restart_game()
 
 main()

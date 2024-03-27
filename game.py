@@ -40,11 +40,7 @@ def update_score_sheet(scores):
     """
     function to update scoresheet 
     """
-    if (scores == "easy_score"):
-        leadboard_easy.append_row(scores)
-    elif (scores == "adv_score"):
-        leadboard_adv.append_row(scores)
-
+    leadboard_easy.append_row(scores)
 
 # A list of countries to be chosen at random
 countries = ['England', 'Ghana', 'America', 'Nigeria',
@@ -132,7 +128,7 @@ def play_guess_easy(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
-            easy_score = input(tries * 10)
+            easy_score = [tries * 10]
             update_score_sheet(easy_score)
 
             break
