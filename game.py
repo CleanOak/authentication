@@ -190,7 +190,7 @@ def play_guess_advanced(random_word):
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
             adv_score = [tries * 10]
-            update_easy_score_sheet(adv_score)
+            update_adv_score_sheet(adv_score)
             break
         if tries == 0:
             print("\n")
