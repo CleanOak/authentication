@@ -61,11 +61,12 @@ def login(login_user_data):
                         x= 1
                     else:
                         print("Incorrect password...")
+                        break
 
-            return user_name
-        
         except ValueError as v:
             print("Your username or password does not match please try again\n", v)
+
+    return user_name
 
 def signup(user_data):
     """
