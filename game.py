@@ -36,11 +36,11 @@ def advance_scores_data():
     return adv_score
 
 
-def update_easy_score_sheet(scores):
+def update_easy_score_sheet(score):
     """
     function to update scoresheet 
     """
-    leadboard_easy.append_row(scores)
+    leadboard_easy.append_row(score)
 
 def update_adv_score_sheet(scores):
     """
@@ -135,7 +135,8 @@ def play_guess_easy(random_word):
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
             player = login
-            easy_score = [str(tries * 10), player]
+            # str(tries * 10),
+            easy_score = [ player]
             update_easy_score_sheet(easy_score)
 
             break
