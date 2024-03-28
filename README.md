@@ -281,6 +281,24 @@
 
 - This validator was provided by Code institute
 - - no significant errors were found
+ 
+- - authentication.py
+<details>
+    <summary>Authentication</summary>
+    <img src="assets/screenshots/auth.png" alt="Authentication file screenshot">
+</details> 
+
+- - game.py
+<details>
+    <summary>Game</summary>
+    <img src="assets/screenshots/game.png" alt="Game file screenshot">
+</details> 
+
+- - run.py
+<details>
+    <summary>Run</summary>
+    <img src="assets/screenshots/run.png" alt="Run file screenshot">
+</details> 
 
 ### Bugs and Fixes
 
