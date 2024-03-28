@@ -5,8 +5,7 @@ import random
 import gspread
 from google.oauth2.service_account import Credentials
 
-from authenticator import player
-from authenticator import login_data
+
 
 
 SCOPE = [
@@ -136,11 +135,8 @@ def play_guess_easy(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
-            
-            # print(player)
-            easy_score = [(tries * 10),player]
+            easy_score = [(tries * 10)]
             update_easy_score_sheet(easy_score)
-
             break
         if tries == 0:
             print("\n")
@@ -202,10 +198,4 @@ def play_guess_advanced(random_word):
             print("\n")
             print("OOO! You lost this time!!! Better luck next time :)\n")
             print (f"The correct word is {random_word}.\n")
-
     return tries
-
- 
-
-
-

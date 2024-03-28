@@ -8,7 +8,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -27,7 +26,6 @@ def login_data():
     """
     data = user_info.get_all_values()
     return data
-
 
 def update_spreadsheet(data):
     """
@@ -67,10 +65,6 @@ def login(login_user_data):
             print("Your username or password does not match please try again\n", v)
 
     return user_name
-
-
-
-
 
 def signup(user_data):
     """
@@ -137,6 +131,3 @@ def signup(user_data):
         data = [new_username,email_address,conf_passwd]
         update_spreadsheet(data)
         break
-player = login(login_data())
-
-
