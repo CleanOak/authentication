@@ -10,7 +10,6 @@ from authenticator import login_data
 from game import choose_level
 
 
-
 def app_banner():
     """
     function to display banner for the game for the application
@@ -18,6 +17,7 @@ def app_banner():
     print("+++++++++++++++++++++++++++++++++++++++++++")
     print("*** WELCOME TO THE COUNTRIES GUESSING GAME ***")
     print("+++++++++++++++++++++++++++++++++++++++++++\n")
+
 
 def game_banner():
     """
@@ -34,18 +34,21 @@ def game_banner():
     time.sleep(0.5)
     print("User has 10 tries to guess the correct country word")
     time.sleep(0.5)
-    print("If the random alphabet is in the country word, user receives a correct prompt")
+    print("If the random alphabet is in the country word,"
+          "user receives a correct prompt")
     time.sleep(0.5)
-    print("If the letter is wrong and not in the country word the number of tries reduces until zero\n\n")
+    print("If the letter is wrong and not in the country"
+          "word the number of tries reduces until zero\n\n")
     print("Game Starts Now...")
-    
+
+
 def login_check():
     """
     Function to validate if user needs a new account or not
     """
     while True:
 
-        user_answer  = input("Do you already have an account? y/n\n")
+        user_answer = input("Do you already have an account? y/n\n")
         if user_answer.lower() == 'y':
             user_exist()
             break
@@ -53,7 +56,8 @@ def login_check():
             new_user()
             break
         else:
-            print ("Please enter y or n")
+            print("Please enter y or n")
+
 
 def user_exist():
     """
@@ -62,6 +66,7 @@ def user_exist():
     login(login_data())
     game_banner()
 
+
 def new_user():
     """
     Function to allows new user to create username and password
@@ -69,6 +74,7 @@ def new_user():
     signup(login_data())
     login(login_data())
     game_banner()
+
 
 def restart_game():
     """

@@ -1,59 +1,11 @@
 # imports from python library
 import random
 
-# imports from google librabry
-import gspread
-from google.oauth2.service_account import Credentials
-
-
-
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCPOED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCPOED_CREDS)
-SHEET = GSPREAD_CLIENT.open('Authenticate')
-leadboard_easy = SHEET.worksheet('leadboard_easy')
-leadboard_adv = SHEET.worksheet('leadboard_adv')
-
-def easy_scores_data():
-    """
-    function to collect scores from users
-    """
-    easy_score = leadboard_easy.get_all_values()
-    return easy_score
-
-
-def advance_scores_data():
-    """
-    function to collect scores from users
-    """
-    adv_score = leadboard_adv.get_all_values()
-    return adv_score
-
-
-def update_easy_score_sheet(score):
-    """
-    function to update scoresheet 
-    """
-    leadboard_easy.append_row(score)
-
-def update_adv_score_sheet(scores):
-    """
-    function to update scoresheet 
-    """
-    leadboard_adv.append_row(scores)
-
 # A list of countries to be chosen at random
 countries = ['England', 'Ghana', 'America', 'Nigeria',
              'Italy', 'China', 'Mali', 'Russia',
              'Argentina', 'Jamaica', 'Canada',
-            'Brazil', 'Egypt', 'Norway']
+             'Brazil', 'Egypt', 'Norway']
 
 
 def level_banner():
@@ -62,7 +14,9 @@ def level_banner():
     """
     print("Choose a level from below...\n")
     print("Select Easy or Advanced \n")
-    print("Please type in E to play 'Easy Level' or A to play 'Advanced Leve'\n")
+    print("Please type in E to play 'Easy Level' or"
+          "A to play 'Advanced Leve'\n")
+
 
 def choose_level():
     """
@@ -76,7 +30,7 @@ def choose_level():
             play_guess_easy(select_random_word())
             break
         if user_input.lower() == 'a':
-            print("This is Advanced Level") 
+            print("This is Advanced Level")
             play_guess_advanced(select_random_word())
             break
         else:
@@ -89,6 +43,7 @@ def select_random_word():
     """
     random_word = random.choice(countries)
     return random_word.upper()
+
 
 def play_guess_easy(random_word):
     """
@@ -135,13 +90,11 @@ def play_guess_easy(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
-            easy_score = [(tries * 10)]
-            update_easy_score_sheet(easy_score)
             break
         if tries == 0:
             print("\n")
             print("OOO! You lost this time!!! Better luck next time :)\n")
-            print (f"The correct word is {random_word}.\n")
+            print(f"The correct word is {random_word}.\n")
 
     return tries
 
@@ -191,11 +144,9 @@ def play_guess_advanced(random_word):
             print(f"\nCongrats. The secret word is {random_word}.")
             print("\nHURAAYYY!!! You Guessed correctly :)")
             print(f"You scored: {tries * 10} points")
-            adv_score = [tries * 10]
-            update_adv_score_sheet(adv_score)
             break
         if tries == 0:
             print("\n")
             print("OOO! You lost this time!!! Better luck next time :)\n")
-            print (f"The correct word is {random_word}.\n")
+            print(f"The correct word is {random_word}.\n")
     return tries
