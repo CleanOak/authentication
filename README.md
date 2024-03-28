@@ -182,11 +182,26 @@
     <img src="assets/screenshots/signup.png" alt="Login area">
 </details> 
 
-3. I want to be able to log-in if I return to the game
+3. I want to be able to choose difficulty levels
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Login To Play Hangman | Username/ Password | Login Successful : Open rules | Works as expected
+| Choose difficulty level | Select E for Easy or A for Advanced | Login Successful : Opens level | Works as expected
+
+<details>
+    <summary>Screenshots</summary>
+    <p>Choose Level</p>
+    <img src="assets/screenshots/easy_level.png" alt="Easy Level">   
+    <p>Open rules is prompted after login is successful</p>
+    <img src="assets/screenshots/adv_level.png" alt="Advanced Level">
+</details> 
+
+
+4. I want to be able to log-in if I return to the game
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Login To Play GuessGame | Username/ Password | Login Successful : Open rules | Works as expected
 
 <details>
     <summary>Screenshots</summary>
@@ -196,7 +211,7 @@
     <img src="assets/screenshots/rules.png" alt="Open rules">
 </details> 
 
-4. I want to be able to read the rules of the game
+5. I want to be able to read the rules of the game
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
@@ -208,7 +223,7 @@
     <img src="assets/screenshots/rules.png" alt="Open rules">
     
 
-5. I want to be able to restart game when I'm logged in
+6. I want to be able to restart game when I'm logged in
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
@@ -305,8 +320,7 @@
 | ------- | ------- |
 | Users were able to sign up multiple times with same username | Add signup_check function which will prompt again if user exist or not|
 | Users could sign up with blank username | Add validation to check if user did not input a name|
-| regex error sometimes when the game starts | Included 'r' string which enabled backslash to escape 
-some characters |
+| regex error sometimes when the game starts | Included 'r' string which enabled backslash to escape some characters |
 
 
 ### Unfixed Bugs
