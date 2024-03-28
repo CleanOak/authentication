@@ -69,7 +69,7 @@ def login(login_user_data):
     return user_name
 
 
-player = login(login_data())
+
 
 
 def signup(user_data):
@@ -137,3 +137,6 @@ def signup(user_data):
         data = [new_username,email_address,conf_passwd]
         update_spreadsheet(data)
         break
+player = login(login_data())
+
+
