@@ -59,7 +59,7 @@
 
 <details>
     <summary>Flowchart</summary>
-    <p>Hangman Game Flowchart</p>
+    <p>GuessGame Game Flowchart</p>
     <img src = "assets/screenshots/flowchart.png" alt = "A screenshot of flowchart">
 </details>
 
