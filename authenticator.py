@@ -68,6 +68,10 @@ def login(login_user_data):
 
     return user_name
 
+
+player = login(login_data())
+
+
 def signup(user_data):
     """
     Get new user details to create login credentials 
