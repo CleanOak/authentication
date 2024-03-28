@@ -282,21 +282,20 @@
 - This validator was provided by Code institute
 - - no significant errors were found
  
-- - authentication.py
 <details>
-    <summary>Authentication</summary>
+    <summary>authentication.py</summary>
     <img src="assets/screenshots/auth.png" alt="Authentication file screenshot">
 </details> 
 
-- - game.py
+
 <details>
-    <summary>Game</summary>
+    <summary>game.py</summary>
     <img src="assets/screenshots/game.png" alt="Game file screenshot">
 </details> 
 
-- - run.py
+
 <details>
-    <summary>Run</summary>
+    <summary>run.py</summary>
     <img src="assets/screenshots/run.png" alt="Run file screenshot">
 </details> 
 
@@ -305,12 +304,16 @@
 | **Bugs** | **Fixes** |
 | ------- | ------- |
 | Users were able to sign up multiple times with same username | Add signup_check function which will prompt again if user exist or not|
+| Users could sign up with blank username | Add validation to check if user did not input a name|
+| regex error sometimes when the game starts | Included 'r' string which enabled backslash to escape 
+some characters |
 
 
 ### Unfixed Bugs
 
-- No unfixed bugs
-- However, code (signup and login functions) can be made more efficient
+- A function was created to update a different sheet of scores and players to create a leaderboard
+- However an unexpected result was encounted when the game starts so this part had to be taken 
+- out of the game.
 
 ## Deployment
 
