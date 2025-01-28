@@ -2,7 +2,7 @@
 
 (Developer: Morgan Asare)
 
-[Link to the website]([https://world-guessing-game-b0270169a6ef.herokuapp.com/])
+[Link to the website](https://world-guessing-game-b0270169a6ef.herokuapp.com/)
 
 ![An image previewing all devices](/assets/screenshots/preview.png)
 
